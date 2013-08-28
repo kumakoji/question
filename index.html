@@ -1,0 +1,115 @@
+<script>
+	var question_data = {};
+	var question_cand = [];
+	var category ="ALL";
+	var question_val ="ALL";
+	var rand;
+	var tec = [
+                "基礎理論",
+                "アルゴリズムとプログラミング",
+                "コンピュータ構成要素",
+                "システム構成要素",
+                "ソフトウェア",
+                "ハードウェア",
+                "ヒューマンインターフェイス",
+                "マルチメディア",
+                "データベース",
+                "ネットワーク",
+                "セキュリティ",
+                "システム開発技術",
+		"ソフトウェア開発管理技術",
+		];
+		var man = [	
+                "プロジェクトマネジメント",
+                "サービスマネジメント",
+                "システム監査",
+		];
+		var str = [	
+                "システム戦略",
+                "システム企画",
+                "企業活動",
+                "経営戦略マネジメント",
+                "技術戦略マネジメント",
+                "ビジネスインダストリ",
+                "法務",
+		];
+</script>
+
+<html lang="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<script language="javascript" src="js/jquery-1.7.2.js"></script>
+	<script language="javascript" src="js/script.js"></script>
+	<script language="javascript" src="js/Chart.js"></script>	
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<style>
+		.buttons{
+			text-align: left;
+		}
+		div#refresh_all{
+			float: right;
+		}
+</style>
+</head>
+<body>
+	<div class="buttons">
+	<input type="submit" value="True" style="width:150px;height:50" id="true_click">
+	<input type="submit" value="Reload" style="width:150px;height:50" id="reload_page">
+	<input type="submit" value="False" style="width:150px;height:50" id="false_click">
+	</div>
+	<input type="submit" value="refresh" id="refresh_all">
+	<input type="submit" value="show result" id="show_result"><br>
+	Category<select id="question_categ" size="1">
+		<option>ALL</option>	
+		<option>+++テクノロジ系+++</option>
+		<option>基礎理論</option>
+		<option>アルゴリズムとプログラミング</option>
+		<option>コンピュータ構成要素</option>
+		<option>システム構成要素</option>
+		<option>ソフトウェア</option>
+		<option>ハードウェア</option>
+		<option>ヒューマンインターフェイス</option>
+		<option>マルチメディア</option>
+		<option>データベース</option>
+		<option>ネットワーク</option>
+		<option>セキュリティ</option>
+		<option>システム開発技術</option>
+		<option>ソフトウェア開発管理技術</option>
+		
+		<option>+++ストラテジ系+++</option>
+		<option>システム戦略</option>
+		<option>システム企画</option>
+		<option>企業活動</option>
+		<option>経営戦略マネジメント</option>
+		<option>技術戦略マネジメント</option>
+		<option>ビジネスインダストリ</option>
+		<option>法務</option>
+		
+
+			
+		<option>+++マネジメント系+++</option>
+		<option>プロジェクトマネジメント</option>
+		<option>サービスマネジメント</option>
+		<option>システム監査</option>
+
+			</select><br>
+	Question<select id="question_val" size="1">
+		<option>ALL</option>
+		<option>NO ANSWER</option>
+		<option>HARD</option>
+	</select><br>
+	該当件数:<span id=cand_num>800</span><br>
+	<input type="hidden" value="save" id="save_xml" class="none">	
+	<div id="save_checker"></div>
+	true	<span id="true"></span><br>
+	false	<span id="false"></span>
+	<div id="result"></div>
+	<div id="radar">
+		<canvas id="radar1" height="600" width="600"></canvas><br>
+		<span>テクノロジ系</span><br><canvas id="radar2" height="600" width="600"></canvas><br>	
+		<span>ストラテジ系</span><br><canvas id="radar4" height="600" width="600"></canvas><br>	
+		<span>マネジメント系</span><br><canvas id="radar3" height="600" width="600"></canvas><br>	
+	</div>
+	</body>
+</html>

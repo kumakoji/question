@@ -1,0 +1,89 @@
+
+function output_score(question_data,rand,value){
+	item = question_data[rand].split(",");
+	item[0] = parseInt(item[0],10)+1;
+	item[1] = parseInt(item[1],10)+parseInt(value,10);
+	line = item[0]+","+item[1]+","+item[2];
+	question_data[rand] = line;
+	console.log(question_data[rand]);
+	$('#true').text(item[1]);	
+	$('#false').text(parseInt(item[0])-parseInt(item[1]));
+	$('#question_categ').click();
+	$('#save_xml').click();
+	$('#reload_page').click();
+}
+function make_radar_data(){
+
+	return radar_data;
+}
+function show_chart(sum,cor){
+	
+console.log(sum);	
+console.log(cor);	
+	var name_category = [];
+	var name_tec = [];
+	var name_man = [];
+	var name_str = [];
+	var score_category= [];	
+	var score_tec = [];	
+	var score_man = [];	
+	var score_str = [];	
+	for(var i in sum){
+		name.push(i);
+		if(sum[i] == 0){
+			score.push(0.0);
+		}
+		else{
+			score.push( parseFloat(cor[i])/parseFloat(sum[i]) );
+		}
+	}
+	var radarChartData = {
+	  labels : name,
+	  datasets : [
+	    {
+		fillColor : "rgba(151,187,205,0.5)",
+		strokeColor : "rgba(151,187,205,1)",
+		pointColor : "rgba(151,187,205,1)",
+		pointStrokeColor : "#fff",
+		data : score 
+	    }
+	  ]  
+	}
+	var myRadar = new Chart(document.getElementById("radar1").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+	var myRadar = new Chart(document.getElementById("radar2").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+	var myRadar = new Chart(document.getElementById("radar3").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+	var myRadar = new Chart(document.getElementById("radar4").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+
+
+
+//	var radarChartData = {
+//	  labels : ["Eating","Drinking","Sleeping","Designing","Coding","Partying","Running"],
+//	  datasets : [
+//	    {
+//	      fillColor : "rgba(220,220,220,0.5)",
+//	      strokeColor : "rgba(220,220,220,1)",
+//	      pointColor : "rgba(220,220,220,1)",
+//	      pointStrokeColor : "#fff",
+//	      data : [65,59,90,81,56,55,40]
+//	    }
+//	  ]  
+//	}
+//	var myRadar = new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+//
+//var pieData = [
+//	{
+//		name: "tmp",
+//		value: 70,
+//		color:"#CCCCCC"
+//	},
+//	{
+//		value : 15,
+//		color : "#FF0066"
+//	},
+//	{
+//		value : 15,
+//		color : "#666666"
+//	}
+//	];
+//	var myPie = new Chart(document.getElementById("pieArea").getContext("2d")).Pie(pieData);
+}

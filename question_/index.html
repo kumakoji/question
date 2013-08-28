@@ -1,0 +1,375 @@
+<script>
+	var question_data = {};
+	var question_cand = [];
+	var category ="ALL";
+	var question_val ="ALL";
+	var rand;
+	var tec = [
+                "基礎理論",
+                "アルゴリズムとプログラミング",
+                "コンピュータ構成要素",
+                "システム構成要素",
+                "ソフトウェア",
+                "ハードウェア",
+                "ヒューマンインターフェイス",
+                "マルチメディア",
+                "データベース",
+                "ネットワーク",
+                "セキュリティ",
+                "システム開発技術",
+		"ソフトウェア開発管理技術",
+		];
+		var man = [	
+                "プロジェクトマネジメント",
+                "サービスマネジメント",
+                "システム監査",
+		];
+		var str = [	
+                "システム戦略",
+                "システム企画",
+                "企業活動",
+                "経営戦略マネジメント",
+                "技術戦略マネジメント",
+                "ビジネスインダストリ",
+                "法務",
+		];
+</script>
+
+<html lang="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<script language="javascript" src="js/jquery-1.7.2.js"></script>
+	<script language="javascript" src="js/script.js"></script>
+	<script language="javascript" src="js/Chart.js"></script>	
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<style>
+		.buttons{
+			text-align: left;
+		}
+		div#refresh_all{
+			float: right;
+		}
+</style>
+</head>
+<body>
+	<div class="buttons">
+	<input type="submit" value="True" style="width:150px;height:50" onclick="output_score(question_data,rand,1)">
+	<input type="submit" value="Reload" style="width:150px;height:50" id="reload_page">
+	<input type="submit" value="False" style="width:150px;height:50" onclick="output_score(question_data,rand,0)">
+	</div>
+	<input type="submit" value="refresh" id="refresh_all">
+	<input type="submit" value="show result" id="show_result"><br>
+	Category<select id="question_categ" size="1">
+		<option>ALL</option>	
+		<option>+++テクノロジ系+++</option>
+		<option>基礎理論</option>
+		<option>アルゴリズムとプログラミング</option>
+		<option>コンピュータ構成要素</option>
+		<option>システム構成要素</option>
+		<option>ソフトウェア</option>
+		<option>ハードウェア</option>
+		<option>ヒューマンインターフェイス</option>
+		<option>マルチメディア</option>
+		<option>データベース</option>
+		<option>ネットワーク</option>
+		<option>セキュリティ</option>
+		<option>システム開発技術</option>
+		<option>ソフトウェア開発管理技術</option>
+
+			
+		<option>+++マネジメント系+++</option>
+		<option>プロジェクトマネジメント</option>
+		<option>サービスマネジメント</option>
+		<option>システム監査</option>
+
+		<option>+++ストラテジ系+++</option>
+		<option>システム戦略</option>
+		<option>システム企画</option>
+		<option>企業活動</option>
+		<option>経営戦略マネジメント</option>
+		<option>技術戦略マネジメント</option>
+		<option>ビジネスインダストリ</option>
+		<option>法務</option>
+		
+	</select><br>
+	Question<select id="question_val" size="1">
+		<option>ALL</option>
+		<option>NO ANSWER</option>
+		<option>HARD</option>
+	</select><br>
+	該当件数:<span id=cand_num>800</span><br>
+	<input type="hidden" value="save" id="save_xml" class="none">	
+	<div id="save_checker"></div>
+	true	<span id="true"></span><br>
+	false	<span id="false"></span>
+	<div id="result"></div>
+	<div id="radar">
+		<canvas id="radar1" height="500" width="500"></canvas><br>
+		<span>テクノロジ系</span><br><canvas id="radar2" height="500" width="500"></canvas><br>	
+		<span>マネジメント系</span><br><canvas id="radar3" height="500" width="500"></canvas><br>	
+		<span>ストラテジ系</span><br><canvas id="radar4" height="500" width="500"></canvas><br>	
+	</div>
+	<script>
+		$(function(){
+			$.ajax({
+				url: "data/user/kumanami/data.xml",
+				type: "GET",
+				dataType: "xml",
+//				timeout: 500000,
+				cache: false,
+				error: function(){
+					alert("false");
+				},
+				success: function(xml){
+					console.log("read file");
+					$('#radar').hide();
+					$(xml).find('data').each(function(){
+						var id = $(this).find('id').text();
+						var num = $(this).find('num').text();
+						var true_num = $(this).find('true').text();
+						var categ = $(this).find('categ').text();
+						var line = num+","+true_num+","+categ;
+						question_data[id] = line;
+						//	$("#file").append(id+"\n");
+					});
+					setAll();	
+				}
+
+			});
+			
+			$('#save_xml').click(function(){
+				console.log("save"+question_data);
+				$.post('save_xml.php',{
+					result:question_data
+					},function(data){
+					$('#save_checker').text(data);
+				});
+			});
+
+			$('#reload_page').click(function(){
+				rand = question_cand[Math.floor(Math.random()*question_cand.length,1)];
+				console.log(rand);
+				$("#radar").hide();
+				$.post('view_page.php',{
+					url_data:rand
+						},function(data){
+						$('#result').html(data);
+					});
+					item = question_data[rand].split(",");
+					console.log(item[1],parseInt(item[0])-parseInt(item[1]));	
+					$('#true').text(item[1]);
+					$('#false').text(parseInt(item[0])-parseInt(item[1]));
+			});
+
+			function setAll(){
+				question_cand.length=0;
+				for(var i in question_data){
+					question_cand.push(i);
+				}
+			}
+
+			function change_score(){
+	
+				category = $('#question_categ').val();
+				question_val = $('#question_val').val();
+				console.log(category,question_val);
+				
+				if(category == "ALL"){
+					setAll();
+				}
+				else{
+					question_cand.length=0;
+					if(category == "+++テクノロジ系+++" 
+					|| category == "+++マネジメント系+++" 
+					|| category == "+++ストラテジ系+++"){
+						tmp = category.split("+++");	
+						category = tmp[1];
+						check_category = [];
+						if(category == "テクノロジ系"){
+							check_category = tec;
+						}else if(category == "マネジメント系"){	
+							check_category = man;
+						}else if(category == "ストラテジ系"){
+							check_category = str;
+						}
+						for(var i in question_data){
+							item = question_data[i].split(",");
+							if($.inArray(item[2],check_category) != -1){
+								question_cand.push(i);
+							}	
+						}
+
+					}		
+					else{	
+						for(var i in question_data){
+							item = question_data[i].split(",");
+							if(item[2] == category){
+								question_cand.push(i);
+							}	
+						}
+					}
+				}	
+				console.log("category:"+question_cand.length);
+				
+				if(question_val == "ALL"){
+				}
+				else if(question_val == "NO ANSWER"){
+					var tmp_question = [];
+					for(var i=0; i<question_cand.length; i++){
+						item = question_data[question_cand[i]].split(",");
+						if(item[0] == 0){
+							tmp_question.push(question_cand[i]);
+						}
+					}
+					question_cand = tmp_question;
+				}
+				else if(question_val == "HARD"){
+					var tmp_question = [];
+					for(var i=0; i<question_cand.length; i++){
+						item = question_data[question_cand[i]].split(",");
+						if(item[0] != 0){
+							score = (parseFloat(item[1])/parseFloat(item[0]))
+							if(score <= 0.5){
+								tmp_question.push(question_cand[i]);
+							}	
+						}
+					}
+					question_cand = tmp_question;
+				}	
+				if(question_cand.length == 0)$('#reload_page').attr('disabled',true);
+				else{
+					$('#reload_page').attr('disabled',false);
+					$('#reload_page').click();	
+				}
+				$('#cand_num').text(question_cand.length);	
+				console.log("val:"+question_cand.length);
+		
+			}
+
+
+			$('#question_categ').change(function(){
+				change_score();
+			});
+
+			$('#question_categ').click(function(){
+				change_score();
+			});
+
+
+			$('#question_val').change(function(){
+				change_score();
+			});
+			
+			$('#refresh_all').click(function(){
+				if(confirm("OK?")){
+					$.post('data/user/kumanami/tmp.py',{data:"kumanami"},function(data){
+					console.log(data);
+					});
+				}
+				else{
+				}
+			});			
+			$('#show_result').click(function(){
+				$('#result').empty();
+				 $.post('read_category.php',{
+					},function(data){
+					item = data.split("-");
+					category_relation = {};
+					for(var i=0; i<item.length; i++){	
+						pair = item[i].split(",");
+						tmp = pair[1].split("\n");
+						category_relation[tmp[0]] = pair[0];
+					}
+					sum_category = {};
+					correct_category = {};
+					sum_tec = {};
+					sum_man = {};
+					sum_str = {};
+					correct_tec ={};
+					correct_man ={};
+					correct_str ={};
+					for(var i in question_data){
+						trip = question_data[i].split(",");
+						if(category_relation[trip[2]] in sum_category){
+							sum_category[category_relation[trip[2]]] = 
+							sum_category[category_relation[trip[2]]] + parseInt(trip[0]);
+						}
+						else{
+							sum_category[category_relation[trip[2]]] = parseInt(trip[0]);
+						}
+						if(category_relation[trip[2]] in correct_category){
+							correct_category[category_relation[trip[2]]] =
+							correct_category[category_relation[trip[2]]] + parseInt(trip[1]);
+						}
+						else{
+							correct_category[category_relation[trip[2]]] = parseInt(trip[1]);
+						}
+
+						if(category_relation[trip[2]] == "テクノロジ系"){
+							if(trip[2] in sum_tec){
+								sum_tec[trip[2]] = sum_tec[trip[2]] + parseInt(trip[0]);
+							}
+							else{	
+								sum_tec[trip[2]] = parseInt(trip[0]);
+							}
+							if(trip[2] in correct_tec){
+								correct_tec[trip[2]] = correct_tec[trip[2]] + parseInt(trip[1]);
+							}
+							else{	
+								correct_tec[trip[2]] = parseInt(trip[1]);
+							}
+						}
+						
+						if(category_relation[trip[2]] == "マネジメント系"){
+							if(trip[2] in sum_man){
+								sum_man[trip[2]] = sum_man[trip[2]] + parseInt(trip[0]);
+							}
+							else{	
+								sum_man[trip[2]] = parseInt(trip[0]);
+							}
+							if(trip[2] in correct_man){
+								correct_man[trip[2]] = correct_man[trip[2]] + parseInt(trip[1]);
+							}
+							else{	
+								correct_man[trip[2]] = parseInt(trip[1]);
+							}
+						}
+						if(category_relation[trip[2]] == "ストラテジ系"){
+							if(trip[2] in sum_str){
+								sum_str[trip[2]] = sum_str[trip[2]] + parseInt(trip[0]);
+							}
+							else{	
+								sum_str[trip[2]] = parseInt(trip[0]);
+							}
+							if(trip[2] in correct_str){
+								correct_str[trip[2]] = correct_str[trip[2]] + parseInt(trip[1]);
+							}
+							else{	
+								correct_str[trip[2]] = parseInt(trip[1]);
+							}
+						}
+						
+				}
+//					console.log(sum_category);
+//					console.log(sum_tec);
+//					console.log(sum_man);
+//					console.log(sum_str);
+//					console.log(correct_category);
+//					console.log(correct_tec);
+//					console.log(correct_man);
+//					console.log(correct_str);
+					var sum = [sum_category,sum_tec,sum_man,sum_str];
+					var correct = [correct_category,correct_tec,correct_man,correct_str,];
+					show_chart(sum,correct);
+					$('#radar').show();
+				});
+			});
+			
+		});
+
+	
+	</script>
+
+	</body>
+</html>
