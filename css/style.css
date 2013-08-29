@@ -1,0 +1,34 @@
+#navbar-question{
+	background: rgba(248, 248, 248, 0.7);
+}
+.frame{
+	font-family: 'Happy Monkey', cursive;
+	display: block;
+	padding: 9.5px;
+	margin: 0 0 10px;
+	font-size: 13px;
+	line-height: 1.428571429;
+	color: #333;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+#title{
+	font-family: 'Happy Monkey', cursive;
+	font-weight: bold;
+}
+.main{
+	margin-top: 10px;
+}
+.buttons{
+	font-family: 'Happy Monkey', cursive;
+	margin: 10px 0px 10px 0px;
+}
+.buttons .col-xs-4, .buttons .col-xs-3{
+	padding: 10px 0px 10px 0px;
+}
+.buttons .col-xs-4{
+	margin: 0px 5px 0px 5px;
+}
