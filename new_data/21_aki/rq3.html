@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問3 標本化定理 平成21年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年秋期 午前問3</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年秋期問題一覧</a> | <a href="q2.html" title="前の問題">前の問題</a> | <a href="q4.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問3</h3>
+<div>0～20kHzの帯域幅のオーディオ信号をディジタル信号に変換するのに必要な最大のサンプリング周期を標本化定理によって求めると，何マイクロ秒か。</div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">2.5</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">5</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">25</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">50</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>ｿﾌﾄｳｪｱ開発技術者 H19春 問58</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; 基礎理論 &gt;&gt; 情報に関する理論</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><b>標本化定理</b>とは、アナログ信号をディジタル信号に変換する際のサンプリングにおいて、ディジタル化した信号を元のアナログ信号に戻すためには、アナログ信号の最高周波数の２倍以上でサンプリングしなければならないという定理です。<br><br>信号というのは波形で 1Hzの信号を図にすると以下のようになります。<div class="img_margin"><img src="data/21_aki/img/03a.gif" width="284" height="175" alt="03a.gif/image-size:284×175"></div>つまり、上弦と下弦が合わさって1回の波なので、この1Hzの信号を正しく記録するには2回の記録をしなければならないのです。<br><br>この問題の場合、0～20kHzの帯域幅ということなので、最高周波数 20kHzの2倍の40kHzでのサンプリングが必要ということになります。<br><br>ここまでわかれば後は、サンプリング1回あたりの周期を求めるため、1秒を40kHzで割り、<br><br>　1÷40,000＝25×10<sup>-6</sup><br><br>25マイクロ秒という答えを得ることができます。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

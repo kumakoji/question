@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成22年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問52 アローダイアグラム 平成22年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成22年秋期 午前問52</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成22年秋期問題一覧</a> | <a href="q51.html" title="前の問題">前の問題</a> | <a href="q53.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問52</h3>
+<div>アローダイアグラムで表される作業A～Hを見直したところ，作業Dだけが短縮可能であり，その所要日数を6日間に短縮できることが分かった。作業全体の所要日数は何日間短縮できるか。<div class="img_margin"><img src="data/22_aki/img/52.gif" width="359" height="157" alt="52.gif/image-size:359×157"></div></div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">1</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">2</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">3</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">4</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>初級シスアド H19秋 問34</li><li>基本情報技術者 H16秋 問54</li><li>基本情報技術者 H19秋 問48</li><li>ｿﾌﾄｳｪｱ開発技術者 H18春 問47</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>マネジメント系 &gt;&gt; プロジェクトマネジメント &gt;&gt; タイム・マネジメント</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">アローダイアグラムの定番問題です。<br><br>まず短縮前の図でクリティカルパスを求めます。<br>[A→B→E→G]<br>5＋3＋5＋3＝16日<br>[A→C→D→E→G]<br>5＋5＋10＋5＋3＝28日<br>[A→C→F→(作業Eの終了待ち)→H]<br>作業Hは作業Eが終了するまで開始できないので、作業Eの終了待ちが発生します。作業Eが完了するのは、A→C→D→E＝25で、開始から25日後であることから、<br>25＋6＝31日<br><br>以上の計算から、クリティカルパスは、3番目の[A→C→F→H]であることがわかります。<br><br>次に作業Dが6日間短縮された場合ですが、作業Dの短縮されると作業Eの完了が6日間早まることになります。<br><br>作業Eの完了が早まると、作業Fより作業Eのほうが早く完了することになり、[A→C→F→(作業Eの終了待ち)→H]クリティカルパス上の<em class="r">作業Eの終了待ちがなくなる</em>ことになります。(作業Eの完了＝5＋5＋4＋5＝19日後、作業Fの完了＝5＋5＋12＝22日後)<br><br>したがってクリティカルパスは変わりませんが、作業Eの終了待ちがなくなる分だけ作業全体の所要日数が短縮されることになります。<br><br>[A→C→F→H]<br>　5＋5＋12＋6＝28日<br><br>　31日－28日＝<em class="r">3日</em><br><br>短縮日数は3日です。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

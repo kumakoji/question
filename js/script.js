@@ -35,7 +35,7 @@ var data_num ={
 
 $(function(){
 	$.ajax({
-		url: "data/user/kumanami/data.xml",
+		url: "user_data/data.xml",
 		type: "GET",
 		dataType: "xml",
 		cache: false,
@@ -43,6 +43,7 @@ $(function(){
 			alert("false");
 		},
 		success: function(xml){
+			console.log(xml);
 			console.log("read file");
 			$('#radar').hide();
 			$(xml).find('data').each(function(){
@@ -53,7 +54,7 @@ $(function(){
 				var line = num+","+true_num+","+categ;
 				question_data[id] = line;
 			});
-			setAll();	
+			change_score();
 		}
 
 	});
@@ -262,6 +263,7 @@ $(function(){
 		$.post('save_xml.php',{
 			result:question_data
 			},function(data){
+			console.log(data);
 			$('#save_checker').text(data);
 		});
 	});

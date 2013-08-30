@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成24年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問5 スタックを実現する構成要素 平成24年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成24年秋期 午前問5</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成24年秋期問題一覧</a> | <a href="q4.html" title="前の問題">前の問題</a> | <a href="q6.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問5</h3>
+<div>配列を用いてスタックを実現する場合の構成要素として，最低限必要なものはどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">スタックに最後に入った要素を示す添字の変数</div><a href="#ans" class="selectBtn" id="t"><button>ア</button></a></li>
+<li><div id="select_i">スタックに最初に入った要素と最後に入った要素を示す添字の変数</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">スタックに一つ前に入った要素を示す添字の変数を格納する配列</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e">スタックの途中に入っている要素を示す添字の変数</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><div id="amazon300"></div>
+</div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; アルゴリズムとプログラミング &gt;&gt; データ構造</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ア</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>スタック</strong>は、データ挿入の時はデータの最後に追加し、データ取り出し(削除)の時はデータの最後から取り出す(削除)後入れ先出し(LIFO:Last-in First-out)の構造をもっています。<br>スタックでは、データを挿入するPUSH命令、データを散りだすPOP命令を使用してデータ操作を行います。<br><br>配列Mを用いて、<br>　PUSH 1→PUSH 5→POP→PUSH 7 PUSH 6→PUSH 4→POP→POP→PUSH 3<br>という操作を行う場合、<br><dl class="tbl2"><br><dt>PUSH 1</dt><dd>M(1)</dd><dt>PUSH 5</dt><dd>M(1，5)</dd><dt>POP</dt><dd>M(1)</dd><dt>PUSH 7</dt><dd>M(1，7)</dd><dt>PUSH 6</dt><dd>M(1，7，6)</dd><dt>PUSH 4</dt><dd>M(1，7，6，4)</dd><dt>POP</dt><dd>M(1，7，6)</dd><dt>POP</dt><dd>M(1，7)</dd><dt>PUSH 3</dt><dd>M(1，7，3)</dd></dl>という流れになり、PUSH操作では<em class="r">配列の最終要素の添え字＋1</em>の位置に新要素を追加、POP操作では<em class="r">配列の最終要素の添え字</em>に位置する要素を削除することを行います。。<br><br>つまり最低限「スタックに最後に入った要素を示す添字の変数」を保持していればスタック構造が実現できることになります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成24年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問28 UNIQUE制約 平成24年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成24年秋期 午前問28</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成24年秋期問題一覧</a> | <a href="q27.html" title="前の問題">前の問題</a> | <a href="q29.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問28</h3>
+<div>R表に，(A，B)の2列で一意にする制約(UNIQUE制約)が定義されているとき，R表に対するSQL文のうち，この制約に違反するものはどれか。ここで，R表には主キーの定義がなく，また，全ての列は値が決まっていない場合(NULL)もあるものとする。<div class="img_margin"><img src="data/24_aki/img/28.gif" width="331" height="142" alt="28.gif/image-size:331×142"></div></div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a"><span class="code">DELETE FROM R WHERE A = 'AA01' AND B = 'BBO2'</span></div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i"><span class="code">INSERT INTO R(A，B，C，D) VALUES ('AAO1'，NULL，'DDO1'，'EE01')</span></div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u"><span class="code">INSERT INTO R(A，B，C，D) VALUES (NULL， NULL，'AA01'，'BB02')</span></div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e"><span class="code">UPDATE R SET A = 'AAO2' WHERE A = 'AAO1'</span></div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; データベース &gt;&gt; データベース設計</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>UNIQUE制約</strong>(一意性制約)は、データベースにデータを追加したり更新する際に、列や列のグループが表内のすべての行で一意となるように要求する制約です。なおUNIQUE制約は、NULL値を許容するという点で主キー制約と異なります。<br><br>この問題では(A，B)の2列の組合せが表内で一意となっていることが要求されているので、それぞれのSQL文を実行した結果を考えてみましょう。<ul><li class="lia">Aが'AA01' かつ Bが'BBO2'の行、つまり一番上の行を削除するSQL文です。<div class="img_margin"><img src="data/24_aki/img/28a.gif" width="328" height="98" alt="28a.gif/image-size:328×98"></div>結果を見ても制約に違反している行はありません。</li><li class="lii">表に('AAO1'，NULL，'DDO1'，'EE01')の行を挿入するSQL文です。<div class="img_margin"><img src="data/24_aki/img/28i.gif" width="331" height="145" alt="28i.gif/image-size:331×145"></div>結果を見ても制約に違反している行はありません。</li><li class="liu">表に(NULL， NULL，'AAO1'，'BB02')の行を挿入するSQL文です。<div class="img_margin"><img src="data/24_aki/img/28u.gif" width="331" height="145" alt="28u.gif/image-size:331×145"></div>結果を見ても制約に違反している行はありません。</li><li class="lie">Aが'AAO1'のレコードである行のAを'AAO2'に更新するSQL文です。<div class="img_margin"><img src="data/24_aki/img/28e.gif" width="331" height="121" alt="28e.gif/image-size:331×121"></div>更新によってAが'AA02'、Bが'BB01'の行が重複することになるので、この操作はUNIQUE制約に違反しています。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

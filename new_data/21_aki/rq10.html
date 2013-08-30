@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問10 ダイレクトマップ方式 平成21年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年秋期 午前問10</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年秋期問題一覧</a> | <a href="q9.html" title="前の問題">前の問題</a> | <a href="q11.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問10</h3>
+<div>キャッシュメモリにおけるダイレクトマップ方式の説明として，適切なものはどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">アドレスが連続した二つ以上のメモリブロックを格納するセクタを，キャッシュ内の任意のロケーションに割り当てる。</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">一つのメモリブロックをキャッシュ内の単一のロケーションに割り当てる。</div><a href="#ans" class="selectBtn" id="t"><button>イ</button></a></li>
+<li><div id="select_u">メモリブロックをキャッシュ内の任意のロケーションに割り当てる。</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e">メモリブロックをキャッシュ内の二つ以上の配置可能なロケーションに割り当てる</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>応用情報技術者 H24春 問10</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; コンピュータ構成要素 &gt;&gt; メモリ</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">イ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">ダイレクトマップ(マッピング)方式は、キャッシュメモリへの割付方式のひとつで、主記憶のアドレスにハッシュ演算を行い、その結果から対応するキャッシュメモリのアドレスを算出します。ハッシュ演算で計算するので主記憶のアドレスとキャッシュメモリのアドレスが1対1で対応します。<br><br>一般的にダイレクトマッピングで主記憶のブロック番号から、キャッシュメモリのブロック番号を算出するハッシュ関数は、<br>　(主記憶のブロック番号) mod (キャッシュメモリのブロック数)<br>の式が使用されます。<br><br>キャッシュメモリの割付方式には、ダイレクトマッピングのほかに<b>フルアソシアティブ</b>と<b>セットアソシアティブ</b>があります。<dl><dt>フルアソシアティブ</dt><dd>主記憶のブロックが、キャッシュメモリのどのブロックにも対応付けられる方式です。<br>ハッシュ演算の結果によらずどこにも書き込めるので、キャッシュメモリの使用率が向上にしますが、ダイレクトマッピングよりも計算にかかるオーバーヘッドが増加し、システムの仕組みを複雑になってしまうデメリットもあります。</dd><dt>セットアソシアティブ</dt><dd>連続したキャッシュブロックをセットとしてまとめ、その中であればどこのブロックでも格納できるようにした方式です。<br>ダイレクトマッピングでは、ハッシュ関数で算出されたブロックに既にデータが存在する場合には追い出しが発生しますが、セットアソシアティブでは、一つのセットに複数のブロックがあるので追い出しをしなくてもデータを格納できます。<br>セット内のブロック数がN個のとき、Nウェイ・セットアソシアティブと言います。現在、コンピュータでは、4ウェイまたは8ウェイが主流です。</dd></dl><ul><li class="lia">ダイレクトマッピング方式では、主記憶のアドレスとキャッシュ内の格納ブロックは一意に対応します。任意の場所に格納するのはフルアソシアティブ方式の特徴です。</li><li class="lii">正しい。</li><li class="liu">フルアソシアティブの説明です。</li><li class="lie">セットアソシアティブの説明です。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

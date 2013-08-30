@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成22年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問9 MIPS値の計算 平成22年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成22年秋期 午前問9</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成22年秋期問題一覧</a> | <a href="q8.html" title="前の問題">前の問題</a> | <a href="q10.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問9</h3>
+<div>動作クロック周波数が700MHzのCPUで，命令の実行に必要なクロック数とその命令の出現率が表に示す値である場合，このCPUの性能は約何MIPSか。<div class="img_margin"><img src="data/22_aki/img/09.gif" width="345" height="86" alt="09.gif/image-size:345×86"></div></div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">10</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">50</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">70</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">100</div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>基本情報技術者 H17秋 問19</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; コンピュータ構成要素 &gt;&gt; プロセッサ</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">まず１命令を実行するのに必要な平均クロック数を求めます。<br><br>各命令を実行するのに必要なクロック数に、出現率を乗じたものを足し合わせて、<br>　(4×0.3)＋(8×0.6)＋(10×0.1)<br>＝1.2＋4.8＋1.0＝7.0<br><br>上の計算結果から、<font color="red">１命令に必要な平均クロック数は 7クロック</font>であることがわかりました。<br><br>CPUの動作クロック数が 700MHzなので、1秒間の命令実行可能回数は、<br><br>　700×10<sup>6</sup>÷7＝100×10<sup>6</sup><br><br>MIPSは1秒間に実行できる命令数を百万単位で表す指標なので、このCPUの性能は <b>100MIPS</b> ということになります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

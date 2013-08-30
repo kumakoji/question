@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成23年特別">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問8 シノニム 平成23年特別｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成23年特別 午前問8</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成23年特別問題一覧</a> | <a href="q7.html" title="前の問題">前の問題</a> | <a href="q9.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問8</h3>
+<div>キーが小文字のアルファベット1文字（a, b, …， z のいずれか）であるデータを，大きさが10のハッシュ表に格納する。ハッシュ関数として，アルファベットのASCIIコードを10進表記法で表したときの1の位の数を用いることにする。衝突が起こるキーの組合せはどれか。ASCIIコードでは，昇順に連続した2進数が，アルファベット順にコードとして割り当てられている。</div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">a と i</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">b と r</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">c と l</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">d と x</div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; アルゴリズムとプログラミング &gt;&gt; データ構造</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">ASCIIコード上で、アルファベットは並び順どおりに連続した位置に配置されています。<div class="img_margin"><img src="data/23_toku/img/08_1.gif" width="406" height="307" alt="08_1.gif/image-size:406×307"></div>ハッシュ表の大きさが10であり、格納位置を求めるハッシュ関数にASCII コードを10進表記法で表したときの１の位の数を使うことから、１の位が同じとなるアルファベット同士では、ハッシュ表上の格納位置が同じになってしまうシノニム（衝突）が発生することになります。<br><br>つまりASCII コード上のアルファベット同士の距離が、10の倍数であるものが衝突が起こるキーの組合せです。<ul><li class="lia">a と i の距離は、8のため衝突は発生しません。</li><li class="lii">b と r の距離は、16であるため衝突は発生しません。</li><li class="liu">c と l の距離は、9であるため衝突は発生しません。</li><li class="lie">d と x の距離は、20(10の倍数)であるため衝突が発生します。</li></ul><div class="img_margin"><img src="data/23_toku/img/08_2.gif" width="361" height="128" alt="08_2.gif/image-size:361×128"></div></div>
+<!-- SCRIPT END -->
+</body>
+</html>

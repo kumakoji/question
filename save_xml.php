@@ -1,6 +1,9 @@
 <?php
 
-	$result = $_POST['result'];
+$result = $_POST['result'];
+#$result = array(
+#	"24_aki/rq77.html"=>"1,1,システム構成要素"
+#	);
 
 	$dom = new DomDocument('1.0','shift_jis');
 	$dom->formatOutput = true;
@@ -17,5 +20,5 @@
 	}	
 
 	
-	$dom->save('data/user/kumanami/data.xml');
+	$dom->save('user_data/data.xml');
 ?>

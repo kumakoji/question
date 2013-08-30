@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成24年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問75 在庫補充計画 平成24年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成24年春期 午前問75</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成24年春期問題一覧</a> | <a href="q74.html" title="前の問題">前の問題</a> | <a href="q76.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問75</h3>
+<div>X社では，(1)～(4)に示す算定方式で在庫補充量を決定している。第n週の週末時点での在庫量をB[n]，第n週の販売量をC[n]としたとき，第n週の週末に発注する在庫補充量の算出式はどれか。ここで，nは3以上とする。<br><br>〔在庫補充量の算定方式〕<ul><li class="li1">週末ごとに在庫補充量を算出し，発注を行う。在庫は翌週の月曜日に補充される。</li><li class="li2">在庫補充量は，翌週の販売予測量から現在の在庫量を引き，安全在庫量を加えて算出する。</li><li class="li3">翌週の販売予測量は，先週の販売量と今週の販売量の平均値とする。</li><li class="li4">安全在庫量は，翌週の販売予測量の10%とする。</li></ul></div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">(C[n-1]＋C[n])／2×1.1－B[n]</div><a href="#ans" class="selectBtn" id="t"><button>ア</button></a></li>
+<li><div id="select_i">(C[n-1]＋C[n])／2×1.1－B[n-1]</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">(C[n-1]＋C[n])／2＋C[n]×0.1－B[n]</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e">(C[n-2]＋C[n-1])／2＋C[n]×0.1－B[n]</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>初級シスアド H15春 問73</li><li>初級シスアド H18春 問73</li><li>応用情報技術者 H22春 問77</li><li>基本情報技術者 H19秋 問78</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>ストラテジ系 &gt;&gt; 企業活動 &gt;&gt; OR・IE</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ア</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">解き方としては翌週の販売予測量、安全在庫量の順番で求めていきます。<br><br>[翌週の販売予測量]<br>先週の販売量C[n-1]とC[n]の平均値です。　(C[n-1]＋C[n])／2<br><br>[安全在庫量]<br>翌週の販売予測量の10％です。　(C[n-1]＋C[n])／2×0.1<br><br>これらの数値を在庫補充量の算定方式に当てはめると、n週の在庫補充量は、<br><br>　(C[n-1]＋C[n])／2－B[n]＋((C[n-1]＋C[n])／2)×0.1<br><br>となり、翌週の販売予測量と安全在庫量をまとめた<br><br>　(C[n-1]＋C[n])／2×1.1－B[n]<br><br>が答えです。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

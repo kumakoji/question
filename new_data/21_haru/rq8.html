@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問8 探索の平均比較回数 平成21年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年春期 午前問8</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年春期問題一覧</a> | <a href="q7.html" title="前の問題">前の問題</a> | <a href="q9.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問8</h3>
+<div>相違なるn個のデータが昇順に整列された表がある。この表をm個のデータごとのブロックに分割し，各ブロックの最後尾のデータだけを線形探索することによって，目的のデータの存在するブロックを探し出す。次に，当該ブロック内を線形探索して目的のデータを探し出す。このときの平均比較回数を表す式はどれか。ここで，mは十分大きく，nはmの倍数とし，目的のデータは必ず表の中に存在するものとする。</div>
+<div class="ansbg" style="margin: 3em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:220px"><div id="select_a"><img src="data/21_haru/img/08a.gif" width="46" height="22" alt="08a.gif/image-size:46×22"></div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:220px"><div id="select_i"><img src="data/21_haru/img/08i.gif" width="64" height="22" alt="08i.gif/image-size:64×22"></div><a href="#ans" class="selectBtn" id="t"><button>イ</button></a></li>
+<li class="fl" style="min-width:220px;clear:left"><div id="select_u"><img src="data/21_haru/img/08u.gif" width="24" height="22" alt="08u.gif/image-size:24×22"></div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:220px"><div id="select_e"><img src="data/21_haru/img/08e.gif" width="30" height="22" alt="08e.gif/image-size:30×22"></div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>応用情報技術者 H24春 問9</li><li>ｿﾌﾄｳｪｱ開発技術者 H17春 問13</li><li>ｿﾌﾄｳｪｱ開発技術者 H18秋 問11</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; アルゴリズムとプログラミング &gt;&gt; アルゴリズム</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">イ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">線形探索法を2回組み合わせて目的データを探し出すときの平均比較回数を求める問題です。探索するデータ数に注目して考えていきましょう。<br><br>線形探索法とは探索データの先頭から順に探索していく方法で、N個のデータの中から目的のデータを探すときの平均比較回数は<em class="r">(N＋1)／2</em>です。(Nが十分に大きいときは<em class="r">N/2</em>で近似ができる)<br><br>最初は、n個のデータをm個のデータごとのブロックに分割した最後尾のみを線形探索します。<br>　探索するデータ数は、　n／m個<br><br>目的のデータがあるブロックを見つけるまでの平均比較回数は、<br>　n／m÷2＝n／2m回<br><br>です。<br><br>2回目は、1回目の探索によって見つけた目的のデータがあるブロック内を線形探索します。<br>　探索するデータ数は、m個<br><br>目的のデータを見つけるまでの平均比較回数は、<br>　m／2回<br><br>です。<br><br>つまり、1回目と2回目の平均比較回数を合わせた<img src="data/21_haru/img/08i.gif" width="64" height="22" alt="08i.gif/image-size:64×22">が正解となります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

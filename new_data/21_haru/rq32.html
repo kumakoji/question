@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問32 概念データモデルの解釈 平成21年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年春期 午前問32</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年春期問題一覧</a> | <a href="q31.html" title="前の問題">前の問題</a> | <a href="q33.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問32</h3>
+<div>次の概念データモデルの解釈として，適切なものはどれか。ここで，モデルの記法としてUMLを用いる。<div class="img_margin"><img src="data/21_haru/img/32.gif" width="222" height="31" alt="32.gif/image-size:222×31"></div></div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">従業員が所属していない部署の存在は許されない。</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">従業員が所属している部署を削除しても，参照整合性は保証される。</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">従業員は，同時に複数の部署に所属してもよい。</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li><div id="select_e">どの部署にも所属していない従業員が存在してもよい。</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; データベース &gt;&gt; データベース設計</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">UMLのクラス図における各記法の意味は次のようになっています。<div class="img_margin"><img src="data/21_haru/img/32a.gif" width="272" height="61" alt="32a.gif/image-size:272×61"></div>これを踏まえると、設問の図からは、<ol><li>「部署から見ると従業員が0人以上」→従業員が0人の部署の存在が許される。</li><li>「従業員からみると部署が1つ以上」→従業員は必ず1つ以上の部署に所属しなければならない。</li></ol>という2つの関連がわかります。これを踏まえて各選択肢の記述を検討すると、<ul><li class="lia">部署から見た従業員の多重度は0以上なので、0人の場合もあります。</li><li class="lii">従業員レコードが参照する部署コードがなくなってしまうため、参照整合性が損なわれてしまいます。</li><li class="liu">正しい。従業員からみた部署の多重度は1<em class="r">以上</em>なので、一人の従業員が複数の部署に所属することができます。</li><li class="lie">従業員からみた部署の多重度は1以上なので、従業員は必ず1つ以上の部署に所属しなければなりません。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

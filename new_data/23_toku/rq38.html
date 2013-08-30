@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成23年特別">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問38 SSLの通信手順 平成23年特別｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成23年特別 午前問38</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成23年特別問題一覧</a> | <a href="q37.html" title="前の問題">前の問題</a> | <a href="q39.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問38</h3>
+<div>SSLによるクライアントとWebサーバ間の通信手順(1)～(5)において，a，bに入る適切な組合せはどれか。ここで，記述した手順は，一部簡略化している。<ul><li class="li1">クライアントからのSSLによる接続要求に対し，Webサーバは証明書をクライアントに送付する。 </li><li class="li2">クライアントは，保持している<span class="bb">a</span>によってこのサーバ証明書の正当性を確認する。</li><li class="li3">クライアントは，共通鍵生成用のデータを作成し，サーバ証明書に添付された<span class="bb">b</span>によってこの共通鍵生成用データを暗号化し，Webサーバに送付する。</li><li class="li4">受け取ったWebサーバは，自らの秘密鍵によって暗号化された共通鍵生成用データを復号する。 </li><li class="li5">クライアントとWebサーバの両者は，同一の共通鍵生成用データによって共通鍵を作成し，これ以降の両者間の通信は，この共通鍵による暗号化通信を行う。 </li></ul></div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li style="margin-left:5px"><img src="data/23_toku/img/38.gif" width="329" height="126" alt="38.gif/image-size:329×126"></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>応用情報技術者 H21春 問38</li><li>応用情報技術者 H24秋 問33</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; ネットワーク &gt;&gt; 通信プロトコル</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>SSL</strong>(Secure Soket Layer)は、通信の暗号化，ディジタル証明書を利用した改ざん検出，ノード認証を含む統合セキュアプロトコルです。<br>OSI基本参照モデルのトランスポート層で動作するので，上位のアプリケーション層のプログラムから意識することなく利用できます。<br><br><span class="bb">a</span>について<br><strong>サーバ証明書</strong>(ディジタル証明書)は、個人や企業に対する電子式の証明書で、認証局(CA)と呼ばれる第三者機関によって発行されます。サーバ証明書にはその信頼性を保証するため、認証局のディジタル署名が付されています。Webサーバに対して発行されたもので、「サーバの公開鍵」に対して認証局のディジタル署名が付されています。<br>SSLの利用手順では、まずWebサーバからクライアントに対してサーバ証明書を送り、クライアントでは「<em class="r">認証局の公開鍵</em>」を用いて、この証明書の正当性を確認し、Webサーバの認証を行います。(サーバ証明書に添付された「Webサーバの公開鍵」の正当性を確認する。)<br><br>∴<span class="bb">a</span>＝<strong>認証局の公開鍵</strong><br><br><span class="bb">b</span>について<br>クライアントは、Webサーバを認証後、共通鍵生成用のデータをWebサーバと共有するために、自ら生成したデータを暗号化したものをWebサーバに送ります。<br>この際、サーバ証明書に添付された「<strong>Webサーバの公開鍵</strong>」を用いて暗号化したデータをWebサーバに送り、データを受け取ったWebサーバは「Webサーバの秘密鍵」で、このデータを復号し共通鍵生成用のデータを共有します。<br><br>∴<span class="bb">b</span>＝<strong>Webサーバの公開鍵</strong><br><br>その後、クライアントとWebサーバで共有した共通鍵生成用のデータから同一の共通鍵を生成し、以後はこの共通鍵を用いて暗号化通信を行います。<div class="img_margin"><img src="data/23_toku/img/38a.gif" width="387" height="460" alt="38a.gif/image-size:387×460"></div></div>
+<!-- SCRIPT END -->
+</body>
+</html>

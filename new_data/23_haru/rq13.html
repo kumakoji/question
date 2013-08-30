@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成23年特別">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問13 RAID 平成23年特別｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成23年特別 午前問13</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成23年特別問題一覧</a> | <a href="q12.html" title="前の問題">前の問題</a> | <a href="q14.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問13</h3>
+<div>RAID1～5の各構成は，何に基づいて区別されるか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">構成する磁気ディスク装置のアクセス性能</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">コンピュータ本体とのインターフェイスの違い</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">データ及び冗長ビットの記録方法と記録位置との組合せ</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li><div id="select_e">保証する信頼性のMTBF値</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>基本情報技術者 H21春 問13</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; システム構成要素 &gt;&gt; システムの構成</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><b>RAID</b>(Redundant Arrays of Independent Disks)は、安価な磁気ディスクを組み合わせて全体として高い信頼性を得る方式です。<br><br>RAID1～5がありますが、その区別は、本来のデータとエラー訂正用のデータ（ハミング符号・パリティビット）を、どのように書き込むかによって定義されています。<dl><dt>RAID0</dt><dd>複数のディスクにデータを分散して書き込むストライピング</dd><dt>RAID1</dt><dd>２台の磁気ディスクに同じ内容を書き込むミラーリング</dd><dt>RAID2</dt><dd>ストライピング+エラー訂正用のハミング符号をディスクに書き込む。最低でも５台構成となる。</dd><dt>RAID3</dt><dd>ストライピング+エラー修正用にパリティビットを１台のディスクに書き込む</dd><dt>RAID4</dt><dd>RAID3のパリティビットの書き込むをブロック単位で行う。</dd><dt>RAID5</dt><dd>パリティビットもデータと同様に分散して書き込む。</dd></dl>違いをみるとデータおよびエラー訂正用のビットの書き込み方法と、位置の組み合わせが異なることがわかるので、正解は「ウ」です。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

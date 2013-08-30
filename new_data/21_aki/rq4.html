@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問4 CRCに関する記述 平成21年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年秋期 午前問4</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年秋期問題一覧</a> | <a href="q3.html" title="前の問題">前の問題</a> | <a href="q5.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問4</h3>
+<div>誤り検出方式であるCRCに関する記述として，適切なものはどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">検査用データは，検査対象のデータを生成多項式で処理して得られる1ビットの値である。</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">受信側では，付加されてきた検査用データで検査対象のデータを割り，余りがなければ送信が正しかったと判断する。</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">送信側では，生成多項式を用いて検査対象のデータから検査用データを作り，これを検査対象のデータに付けて送信する。</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li><div id="select_e">送信側と受信側では，異なる生成多項式が用いられる。</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>ｿﾌﾄｳｪｱ開発技術者 H18春 問54</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; 基礎理論 &gt;&gt; 情報に関する理論</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><b>CRC</b>(Cyclic Redundancy Check)は、巡回冗長検査という意味で、送信データから<em class="r">生成多項式</em>によって誤り検出用のデータを付加して送信します。受信側では送信側と同じ生成多項式を用いて受信データを除算し、送信されてきた誤り検出用のデータと比較することで誤りの有無を判断します。<br>パリティビットでは検出できなかった「バースト誤りをより複雑な生成多項式による演算を行うことで検出できる」という長所があります。<ul><li class="lia">CRCの検査用データは1ビットではありません。</li><li class="lii">受信側では、受信データを生成多項式で除算し、送信されてきた検査用データと同一かどうかによって送信の正しさを検証します。</li><li class="liu">正しい。</li><li class="lie">検証には送信側と受信側で同じ生成多項式を用います。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

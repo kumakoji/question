@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成22年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問31 インデックスの設定 平成22年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成22年秋期 午前問31</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成22年秋期問題一覧</a> | <a href="q30.html" title="前の問題">前の問題</a> | <a href="q32.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問31</h3>
+<div>関係データベースにおけるインデックスの設定に関する記述のうち，適切なものはどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">インデックスの設定に際しては，検索条件の検討だけでなく，テーブルのレコード数についての考慮も必要である。</div><a href="#ans" class="selectBtn" id="t"><button>ア</button></a></li>
+<li><div id="select_i">インデックスの設定によって検索性能が向上する場合は，更新・削除・追加処理の性能も必ず向上する。</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">インデックスの設定は，論理設計段階で洗い出された検索条件に指定されるすべての列について行う必要がある。</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e">性別のように2値しかもたないような列でも，検索条件に頻繁に指定する場合は，インデックスの設定を行う方がよい。</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; データベース &gt;&gt; トランザクション処理</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ア</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>インデックス</strong>(index)は、索引(さくいん)とも呼ばれデータベースへのアクセス効率を向上させるために、検索対象となるデータ項目に対してインデックス・テーブルと呼ぶテーブルを作成し、それを使ってレコードを検索します。<br>できるだけ重複のない大量のデータをランダムに検索するときに最も効果を発揮しますが、少量のデータからの検索、重複の多いデータからの検索などは速度が上がらず、逆に低下してしまうこともあるためインデックスの設定にはこれらの点を考慮する必要があります。<ul><li class="lia">正しい。レコード数の少ない表からの検索ではインデックスの設定は効果を発揮しないため、レコード数も検討対象になります。</li><li class="lii">インデックスを設定した列に対して更新処理が行われると、インデックス・テーブルの書換えが発生するのでインデックスを設定しない場合と比較して処理時間が長くなります。</li><li class="liu">インデックスの設定は、インデックス・テーブルと表との整合性を保つために処理のオーバヘッドが増すので、設定しても効果が少ない列には設定しないほうが得策です。</li><li class="lie">インデックスによる検索は、重複が多いデータ群の検索では速度が上がらず効果を発揮しません。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

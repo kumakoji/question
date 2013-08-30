@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問31 ストアドプロシージャ 平成21年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年春期 午前問31</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年春期問題一覧</a> | <a href="q30.html" title="前の問題">前の問題</a> | <a href="q32.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問31</h3>
+<div>クライアントサーバシステムにおけるストアドプロシージャに関する記述のうち，<b>誤っているもの</b>はどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">機密性の高いデータに対する処理を特定のプロシージャ呼出しに限定することによって，セキュリティを向上させることができる。</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">システム全体に共通な処理をプロシージャとして格納することによって，処理の標準化を行うことができる。</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">データベースへのアクセスを細かい単位でプロシージャ化することによって，処理性能(スループット)を向上させることができる。</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li><div id="select_e">複数のSQL文から成る手続を1回の呼出しで実行できるので，クライアントとサーバ間の通信回数を減らすことができる。</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><div id="amazon300"></div>
+</div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; データベース &gt;&gt; トランザクション処理</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>ストアドプロシージャ</strong>とは、データベースに対する一連の処理をまとめた手続きにして、データベース管理システムに保存したものです。利用者は通常のクエリを発行する代わりに、データベース管理システム内の手続きの呼出しによって目的の処理を実行させることになります。<br><br>一つの要求で複数のSQL文を実行させることができるのでネットワーク負荷の軽減に繋がったり、誰もがあらかじめ保存された定型処理を行うことになるため標準化ができるなどのメリットがあります。<ul><li class="lia">正しい。ユーザがセキュリティ上問題のある要求を生成することを制限することができます。</li><li class="lii">正しい。</li><li class="liu">誤り。細かな単位ではなく、なるべく大きな単位でまとめたほうがオーバーヘッドが減るのでスループットは向上します。</li><li class="lie">正しい。複数のSQL文から成る手続きを呼び出すときもサーバに１回の要求を行うだけで済みます。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

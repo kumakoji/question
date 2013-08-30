@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成23年特別">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問2 排他的論理和 平成23年特別｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成23年特別 午前問2</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成23年特別問題一覧</a> | <a href="q1.html" title="前の問題">前の問題</a> | <a href="q3.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問2</h3>
+<div>次の論理演算が成立するときに，aに入るビット列はどれか。ここで，&oplus;は排他的論理和を表す。<div class="img_margin">1101&oplus;0001&oplus;<span class="bb">a</span>&oplus;1101＝1111</div></div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">1011</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">1100</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">1101</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">1110</div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; 基礎理論 &gt;&gt; 離散数学</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><span class="bb">a</span>の手前部分の演算は、<br>　 1101 &oplus; 0001 = 1100<br><br>また排他的論理和には、同じビット列で2回演算をすると元のビット列に戻るという特徴があるので、式の結果「1111」とその手前の「1101」の排他的論理和をとると、<br>　1111 &oplus; 1101 = 0010<br><br>となります。計算結果を図に書き込むと以下のようになります。<div class="img_margin"><img src="data/23_toku/img/02.gif" width="226" height="51" alt="02.gif/image-size:226×51"></div>これで<span class="bb">a</span>の前後がわかりましたので、後は演算がつながるように、<br>　1100 &oplus; <span class="bb">a</span>＝0010<br>が成立するビット列を<span class="bb">a</span>に当てはめれば良いことがわかります。<br><br>排他的論理和演算の特徴(ビットが同じなら0，異なれば1を出力)に注意して、ビット列を考えると、<span class="bb">a</span>＝<em class="r">1110</em> となります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

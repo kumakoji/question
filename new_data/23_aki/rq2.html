@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成23年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問2 逆ポーランド表記法 平成23年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成23年秋期 午前問2</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成23年秋期問題一覧</a> | <a href="q1.html" title="前の問題">前の問題</a> | <a href="q3.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問2</h3>
+<div>式A＋B×Cの逆ポーランド表記法による表現として，適切なものはどれか。</div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">＋×CBA</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">×＋ABC</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">ABC×＋</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">CBA＋×</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; 基礎理論 &gt;&gt; 情報に関する理論</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">通常の式を、<strong>逆ポーランド表記法</strong>(後置表記法)で表現するための基本は、<em class="r">A＋B　を　AB＋で表す</em>ことです。1回変換した部分は1つの項とみなすことに注意して、普通に計算式を解くのと同じ順番で変換で行っていくことで逆ポーランド表記法の式になります。ちなみに変換を行う優先順位は、通常の計算式と同様に括弧付き"()"→積商算"×÷"→和差算""＋－"　の順番です。<br><br>最初に、B×Cの部分を変換します。<br>　A＋<em class="r">B</em>×<em class="r">C</em> → A＋BC×<br><br>次に、BC×を1つの項とみなしてAとの＋演算部分を変換します。<br>　<em class="r">A</em>＋<em class="r">BC×</em> → ABC×＋<br><br>これで元の式を逆ポーランド表記法で表現できました。つまり正解は「ウ」です。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

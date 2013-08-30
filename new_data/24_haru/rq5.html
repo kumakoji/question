@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成24年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問5 垂直水平パリティチェック 平成24年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成24年春期 午前問5</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成24年春期問題一覧</a> | <a href="q4.html" title="前の問題">前の問題</a> | <a href="q6.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問5</h3>
+<div>図のように16ビットのデータを4×4の正方形状に並べ，行と列にパリティビットを付加することによって何ビットまでの誤りを訂正できるか。ここで，図の網掛け部分はパリティビットを表す。<div class="img_margin"><img src="data/24_haru/img/05.gif" width="144" height="144" alt="05.gif/image-size:144×144"></div></div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">1</div><a href="#ans" class="selectBtn" id="t"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">2</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">3</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">4</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>ｿﾌﾄｳｪｱ開発技術者 H19春 問57</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; 基礎理論 &gt;&gt; 通信に関する理論</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ア</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>パリティチェック</strong>は、データ通信においてデータに1ビットの検査ビットを付加することで伝送途中のビット誤りを検出する方法の1つです。データのビット列とパリティビットを合わせて「1」のビット数が奇数になるようにパリティビットを付加するのを奇数パリティ、偶数になるように付加するのを偶数パリティといいます。(問題文の例は偶数パリティ)<br>チェック方式としては、送信データそれぞれに対してパリティを付加する垂直パリティ、1番目のデータの1ビット目，2番目のデータの1ビット目～n番目のデータの1ビット目というようにデータブロックの並びに対して付加されたパリティを水平パリティといいます。<br>この問題の例のように両方向にパリティを付加する方式は「水平垂直パリティチェック方式」といい垂直・水平の両者を組み合わせることでビット誤りの検出にとどまらず<em class="r">1ビットであれば正しいデータに訂正することがが可能</em>となっています。<div class="img_margin"><img src="data/24_haru/img/05a.gif" width="365" height="167" alt="05a.gif/image-size:365×167"></div></div>
+<!-- SCRIPT END -->
+</body>
+</html>

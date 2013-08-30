@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成23年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問21 デマンドページング方式 平成23年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成23年秋期 午前問21</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成23年秋期問題一覧</a> | <a href="q20.html" title="前の問題">前の問題</a> | <a href="q22.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問21</h3>
+<div>デマンドページング方式による仮想記憶の説明として，適切なものはどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">あるページのアクセス時に，連続する後続のページも主記憶に読み込む。</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">プログラムで次に必要な手続を指定して，当該ページを主記憶に読み込む。</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">プログラムと同時に，処理対象のデータ部分も主記憶に読み込む。</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e">ページフォールトが発生したときに，当該ページを主記憶に読み込む。</div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; ソフトウェア &gt;&gt; オペレーティングシステム</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>ページング</strong>は、プログラムやデータを分割して記憶領域を管理し、コンピュータの仮想記憶を実現するための方式です。ページングでは、仮想記憶(補助記憶装置)と実記憶(主記憶)間のデータの受け渡しをページという固定長の単位で行いますが、このページのやり取りは「ページフォールトが発生したときに主記憶のどのページを置換えるか」および「どのページをどのタイミングで主記憶に読み込むか」という二つのアルゴリズムに基づいて管理が行われます。<br><br>前者の置換え対象を決定する方法としては、LRU(Least Recently Used)やFIFO(First In First Out)があり、後者の読込み対象と読込むタイミングを決定するアルゴリズムとしては、この問題で問われている<strong>デマンドページング方式</strong>やプリページング方式があります。<dl><dt>デマンドページング</dt><dd>デマンド(demand)とは要求を意味する英語で、その名の通り<em class="r">アクセス要求があった時</em>に<em class="r">要求があったページのみ</em>を主記憶に割り当てる方式。<br>メモリ使用量の節約，プログラム開始時の主記憶へのロードによる遅延がない，ページの読込みが最小限で済むなどの利点があり、実際のOSでは基本的にこの方式が用いられている。</dd><dt>プリページング</dt><dd>ページにアクセス要求がある前に、前もって参照されそうなページを主記憶に読み込んでおく方式。</dd>アクセス要求があった時に周辺のページも同時に主記憶に読み込んだり、プログラムのロード時にたくさんのページを読み込んでおくことで、メモリ使用量は増加するがメモリアクセスの効率を向上させることができる。</dl><ul><li class="lia">プリページング方式の説明です。</li><li class="lii">プリページング方式の説明です。</li><li class="liu">プリページング方式の説明です。</li><li class="lie">正しい。デマンドページング方式の説明です。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問36 適切なIPアドレス 平成21年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年春期 午前問36</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年春期問題一覧</a> | <a href="q35.html" title="前の問題">前の問題</a> | <a href="q37.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問36</h3>
+<div>IPネットワークにおいて，二つのLANセグメントを，ルータを経由して接続する。ルータの各ポート及び各端末のIPアドレスを図のとおりに設定し，サブネットマスクを全ネットワーク共通で255.255.255.128とする。<br>　ルータの各ポートのアドレス設定を正しいとした場合，IPアドレスの設定を正しく行っている端末の組合せはどれか。<div class="img_margin"><img src="data/21_haru/img/36.gif" width="279" height="142" alt="36.gif/image-size:279×142"></div></div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">AとB</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">AとD</div><a href="#ans" class="selectBtn" id="t"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">BとC</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">CとD</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>基本情報技術者 H22秋 問37</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; ネットワーク &gt;&gt; 通信プロトコル</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">イ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">IPアドレスの設定では、ルータのネットワークアドレスと端末のネットワークアドレスが同一になっている必要があります。<br><br>問題のIPネットワークでは接続されている端末のグループを、2つのサブネットに分割しているので、<br>ネットワークアドレスは、各端末に設定されたIPアドレスとサブネットマスクを論理積(AND)演算をしてみることでわかります。<br><br>ルータ左側のサブネットネットワークアドレス<br>　172.16.0.1 AND 255.255.255.128＝<em class="r">172.16.0.0</em><br><br>　A＝172.16.0.10 AND 255.255.255.128＝<em class="r">172.16.0.0</em><br>　B＝172.16.0.130 AND 255.255.255.128＝<em class="r">172.16.0.128</em><br><br>ルータ右側のサブネットネットワークアドレス<br>　172.16.1.5 AND 255.255.255.128＝<em class="r">172.16.1.0</em><br><br>　C＝172.16.1.140 AND 255.255.255.128＝<em class="r">172.16.1.128</em><br>　D＝172.16.1.20 AND 255.255.255.128＝<em class="r">172.16.1.0</em><br><br>以上の演算結果から、正しいIPアドレスを設定しているのは<em class="r">AとD</em>ということになります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

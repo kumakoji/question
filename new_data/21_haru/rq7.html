@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問7 再帰関数の返り値 平成21年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年春期 午前問7</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年春期問題一覧</a> | <a href="q6.html" title="前の問題">前の問題</a> | <a href="q8.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問7</h3>
+<div>文字列を引数とする関数len，first，butfirstを用いて，関数compを再帰的に定義した。<br>comp("11"，"101")を呼び出したとき，返されるものはどれか。<br><br>〔関数の定義〕<br>len(S) ： 文字列Sの長さを返す。Sが空文字列のときは0を返す。 <br>first(S) ： 文字列Sの先頭の1文字のASCIIコードを返す。Sが空文字列のときはエラーを返す。 <br>butfirst(S) ： 文字列Sの先頭の1文字を除いた残りの文字列を返す。<br>　　　　　Sが空文字列のときはエラーを返す。 <br> <br><div class="code">comp(A，B)<br>begin<br>　　　　if　len(A)＝0 and len(B)＝0　then　return　0；<br>　　　　if　len(A)＝0 and len(B)≠0　then　return　1；<br>　　　　if　len(A)≠0 and len(B)＝0　then　return　-1；<br>　　　　if　first(A)＜first(B)　then　return　1；<br>　　　　if　first(A)＞first(B)　then　return　-1；<br>　　　　return　comp(butfirst(A)，butfirst(B))<br>end</div></div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">-1</div><a href="#ans" class="selectBtn" id="t"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">0</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">1</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">エラー</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; アルゴリズムとプログラミング &gt;&gt; アルゴリズム</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ア</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">プログラムをトレースしていくと次のようになります。<br><br><div class="code">[comp("11"，"101")]<br>begin<br>len(11)＝2，len(101)＝3なので、次の処理へ移る。<br>first(11)＝1，first(101)＝1<br>first(11)＝first(101)なので、comp("1", "01")を呼び出す。<br><br>　[comp("1"，"01")]<br>　begin<br>　len(1)＝1，len(01)＝2なので、次の処理へ移る。<br>　first(1)＝1，first(01)＝0<br>　first(1)＞first(01)なので、－1を返す。<br>　end<br><br>comp(1，01)から返却された－1を返す。<br>end<br></div>したがってcomp("11"，"101")の結果は「－1」になります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

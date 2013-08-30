@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成25年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問13 3層C/Sにおける各層の役割 平成25年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成25年春期 午前問13</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成25年春期問題一覧</a> | <a href="q12.html" title="前の問題">前の問題</a> | <a href="q14.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問13</h3>
+<div>3層クライアントサーバシステムの各層の役割のうち，適切なものはどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">データベースアクセス層は，データを加工してプレゼンテーション層に返信する。</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">ファンクション層は，データベースアクセス層で組み立てられたSQL文を解釈する。</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">ファンクション層は，データを加工してプレゼンテーション層に返信する。</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li><div id="select_e">プレゼンテーション層は，データベースアクセス層にSQL文で問い合わせる。</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; システム構成要素 &gt;&gt; システムの構成</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>3層クライアントサーバシステム</strong>は、システムをクライアント(利用者)に近い側から順に「プレゼンテーション層」「ファンクション層」「データベースアクセス層」の3つに論理的に分離したシステムモデルです。<dl><dt>プレゼンテーション層</dt><dd>クライアントからデータを入力を受け付けたり、問合せ結果を表示するなどユーザの入出力を担当する層</dd><dt>ファンクション層</dt><dd>サーバ側でクライアントの問合せを中継したり、データ層から取得したデータを加工してクライアントに送ったりとデータの変換処理を行う層</dd><dt>データベースアクセス層</dt><dd>データベースへのアクセス・保管などデータベース処理を集中的に行う層</dd></dl><div class="img_margin"><img src="data/25_haru/img/13.gif" width="400" height="150" alt="13.gif/image-size:400×150"></div>以上を踏まえて各記述を検証すると、<ul><li class="lia">データの加工はファンクション層が行います。</li><li class="lii">SQL文を解釈するのはデータベースアクセス層の役割です。</li><li class="liu">正しい。ファンクション層は、データベースアクセス層から返された結果を、ユーザに分かるように加工してからプレゼンテーション層に返します。</li><li class="lie">3層C/Sシステムではプレゼンテーション層からデータベースアクセス層に直接的に要求をすることはありません。SQL文を組立てデータベースアクセス層に問合せを行うのはファンクション層の役割です。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

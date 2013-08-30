@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成22年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問32 データベースの正規形 平成22年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成22年春期 午前問32</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成22年春期問題一覧</a> | <a href="q31.html" title="前の問題">前の問題</a> | <a href="q33.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問32</h3>
+<div>"受注明細"表は，どのレベルまでの正規形の条件を満足しているか。ここで，受注番号と明細番号の組は主キーである。<div class="img_margin"><img src="data/22_haru/img/32.gif" width="326" height="118" alt="32.gif/image-size:326×118"></div></div>
+<div class="ansbg" style="margin: 3em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:220px"><div id="select_a">第1正規形</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:220px"><div id="select_i">第2正規形</div><a href="#ans" class="selectBtn" id="t"><button>イ</button></a></li>
+<li class="fl" style="min-width:220px;clear:left"><div id="select_u">第3正規形</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:220px"><div id="select_e">第4正規形</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><div id="amazon300"></div>
+</div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; データベース &gt;&gt; データベース設計</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">イ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">正規化の段階について、再度確認をしておきます。<dl><dt>第1正規形</dt><dd>集団項目や繰り返し項目を分離する。</dd><dt>第2正規形</dt><dd>主キーの一部分である項目に部分関数従属(ある非キー項目が主キーの一部によって決められる関係にある)項目を別表に移します。</dd><dt>第3正規形</dt><dd>非キー項目に関数従属している項目を別表に移す。</dd></dl>&ldquo;受注明細&rdquo;表には、繰り返し項目はなく、主キーの一部分に関数従属もありません。しかし"商品コード"に関数従属している商品名の項目がに別表に移されていません。したがって"受注明細"表は<em class="r">第2正規形</em>まで正規化の条件を満たしていることになります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

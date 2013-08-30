@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問45 モジュール結合度 平成21年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年秋期 午前問45</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年秋期問題一覧</a> | <a href="q44.html" title="前の問題">前の問題</a> | <a href="q46.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問45</h3>
+<div>モジュール結合度が最も弱いモジュールはどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">単一のデータ項目を大域的データで受け渡すモジュール</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">単一のデータ項目を引数で受け渡すモジュール</div><a href="#ans" class="selectBtn" id="t"><button>イ</button></a></li>
+<li><div id="select_u">データ構造を大域的データで受け渡すモジュール</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e">データ構造を引数で渡すモジュール</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>基本情報技術者 H16秋 問51</li><li>ｿﾌﾄｳｪｱ開発技術者 H18秋 問41</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; システム開発技術 &gt;&gt; ソフトウェア方式設計・詳細設計</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">イ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>モジュール結合度</strong>とは、モジュール同士の関連性をの強さを示すもので、モジュール結合度が弱いほどモジュール結合度が弱いほど関連するモジュールに変更があった場合の影響を受けにくくなるので、独立性が高まり、保守性が向上します。<br>データの受け渡し方法などにより全部で６種類に分類されます。<dl><dt>データ結合(弱い↑)</dt><dd>処理に必要なデータだけを単一のパラメータとして受け渡している。</dd><dt>スタンプ結合</dt><dd>処理に必要なデータだけをレコードや構造体などのデータ構造として受け渡している。</dd><dt>制御結合</dt><dd>もう１つのモジュールの制御要素を受け渡している。</dd><dt>外部結合</dt><dd>外部宣言された共通データを参照している。</dd><dt>共通結合</dt><dd>共通域に宣言された共通データを参照している。</dd><dt>内容結合(強い↓)</dt><dd>お互いのモジュール内部を直接参照・分析している。</dd></dl><ul><li class="lia">外部結合の説明です。</li><li class="lii">データ結合です。<em class="r">モジュール結合度が最も弱く</em>なります。</li><li class="liu">共通結合の説明です。</li><li class="lie">スタンプ結合の説明です。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

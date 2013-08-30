@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問5 連結リスト構造 平成21年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年秋期 午前問5</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年秋期問題一覧</a> | <a href="q4.html" title="前の問題">前の問題</a> | <a href="q6.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問5</h3>
+<div>n個の要素x<sub>1</sub>，x<sub>2</sub>，…，x<sub>n</sub>から成る連結リストに対して，新たな要素x<sub>n+1</sub>の末尾への追加に要する時間をf(n)とし，末尾の要素x<sub>n</sub>の削除に要する時間をg(n)とする。nが非常に大きいとき，実装方法1と実装方法2における<img src="data/21_aki/img/05_1.gif" width="29" height="34" alt="05_1.gif/image-size:29×34">の挙動として，適切なものはどれか。<br><br>〔実装方法1〕<br>　先頭のセルを指すポインタ型の変数frontだけをもつ。<div class="img_margin"><img src="data/21_aki/img/05_2.gif" width="287" height="28" alt="05_2.gif/image-size:287×28"></div>〔実装方法2〕<br>　先頭のセルを指すポインタ型の変数frontと，末尾のセルを指すポイント型の変数rearを併せもつ。<div class="img_margin"><img src="data/21_aki/img/05_3.gif" width="303" height="62" alt="05_3.gif/image-size:303×62"></div></div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li style="margin-left:5px"><img src="data/21_aki/img/05a.gif" width="279" height="131" alt="05a.gif/image-size:279×131"></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="t"><button>イ</button></a></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; アルゴリズムとプログラミング &gt;&gt; データ構造</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">イ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">２つの連結構造(単方向リスト・双方向リスト)において、<br>　新要素の末尾への追加 f(n)、<br>　末尾の要素の削除 g(n)<br>に要する時間の関係を、考える問題です。<br>※一回のポインタ参照→次のセルへのアクセスに要する時間は一定であるとし、処理に要する時間は、このセル移動に回数に比例するものとします。<br><br>まず、[実装方法1]について考えます。<br>新要素(n+1)の末尾への追加は、 変数frontからリスト構造を末尾のデータ(n)までたどり、末尾のデータのポインタ部を新しい要素へのポインタにします。<br>したがって、セル移動の回数は、<font color="red">n回</font>です。　<br>末尾の要素の追加は、変数frontから末尾の要素の一つ前の手前の要素(n-1)までたどり、末尾の要素へのポインタを削除します。<br>したがって、セル移動の回数は、<em class="r">n-1回</em>です。<br><br>nは非常に大きいという条件がありますので、[実装方法1]では、<img src="data/21_aki/img/05_1.gif" width="29" height="34" alt="05_1.gif/image-size:29×34">は、<em class="r">n-1/nでほぼ1</em>となります。<br><br>次に、[実装方法2]について考えます。<br>新要素(n+1)の末尾への追加は、 変数rearを参照することで1回で末尾のセルへアクセスし、末尾のデータのポインタ部を新しい要素へのポインタにします。<br>したがって、セル移動の回数は、<em class="r">1回</em>です。　<br>末尾の要素の追加は、[実装方法1]と同様に、変数frontから末尾の要素の一つ前の手前の要素(n-1)までたどり、末尾の要素へのポインタを削除します。この時に変数rearから末尾のセルへ移動できても、「<b>末尾のセルからその一つ手前のセルへはポインタがないので戻ることができない</b>」という点が理解できているかがポイントになります。<br>したがって、セル移動の回数は、<em class="r">n-1回</em>です。<br><br>[実装方法2]では、<img src="data/21_aki/img/05_1.gif" width="29" height="34" alt="05_1.gif/image-size:29×34">は、<em class="r">n-1/1でほぼnに比例</em>となります。<br><br>つまり答えは、[実装方法1]＝"ほぼ1となる"、[実装方法2]＝"ほぼ n に比例する"で「イ」が正解となります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

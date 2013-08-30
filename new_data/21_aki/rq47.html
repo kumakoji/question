@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問47 テストケース設計法 平成21年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年秋期 午前問47</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年秋期問題一覧</a> | <a href="q46.html" title="前の問題">前の問題</a> | <a href="q48.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問47</h3>
+<div>次のテストで用いるテストケース設計法はどれか。<br><br>読み込んだデータが正しくないときにエラーメッセージを出力するかどうかをテストしたい。プログラム仕様書を基に、正しくないデータのクラスを識別し、その中から任意の一つのデータを代表として選びテストケースとする。</div>
+<div class="ansbg" style="margin: 3em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:220px"><div id="select_a">原因結果グラフ</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:220px"><div id="select_i">限界値分析</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:220px;clear:left"><div id="select_u">同値分割</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li class="fl" style="min-width:220px"><div id="select_e">分岐網羅</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; システム開発技術 &gt;&gt; ソフトウェアコード作成及びテスト</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><b>同値分割</b>は、ブラックボックステストを行う際に用いられるテストケース設計方法です。<br><br>一般的に同値分割では、正しい入力値のデータクラス、正しいデータ範囲の上限を超えて無効であるデータクラス、正しいデータ範囲の下限を下回って無効であるデータクラスの3つのデータクラスに分割し、その中から代表として1つの値を選んでテストケースとします。<br><br>例えば、正しい入力値の範囲が0～50の場合、"有効なデータ範囲0～50", "有効範囲を下回る無効なデータ範囲∞～-1", "有効範囲を上回る無効なデータ範囲51～∞"の中から、それぞれ適当な値を選択しテストケースとします。<ul><li class="lia">原因結果グラフは、入力と出力の論理関係を記号を用いたグラフで表現し、それをもとに決定表（デシジョンテーブル）を作成してテスト項目を作成する手法です。</li><li class="lii">限界値分析は、同値分割と同じように、データ範囲を有効値とそれ以上、それ以下で3つに分類するところまでは同じですが、テストケースの値に有効値と無効値の境界値を使うところが異なります。前述の有効値が0～50である場合、限界値分析のテストケースは、「-1, 0, 50, 51」の4つになります。</li><li class="liu">正しい。</li><li class="lie">分岐網羅は、ホワイトボックステストのテストケース作成法のひとつで、判定条件で真となる場合、偽となる場合をそれぞれ少なくとも1回は実行するようにテストケースを作成する手法です。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

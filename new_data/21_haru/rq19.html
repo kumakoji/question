@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問19 ページフォールト発生回数 平成21年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年春期 午前問19</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年春期問題一覧</a> | <a href="q18.html" title="前の問題">前の問題</a> | <a href="q20.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問19</h3>
+<div>主記憶への1回のアクセスが200ナノ秒で，ページフォールトが発生すると1回当たり100ミリ秒のオーバヘッドを伴うコンピュータがある。ページフォールトが主記憶アクセスの50万回に1回発生する場合，ページフォールトは1秒あたり最大何回発生するか。ここで，ページフォールトのオーバヘッド以外の要因は考慮しないものとする。</div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">3</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">4</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">5</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">6</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; ソフトウェア &gt;&gt; オペレーティングシステム</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">ページフォールトは50万回のアクセスで1回発生します。ページフォールトが１回発生するまでの主記憶へのアクセス時間の合計は、<br><br>　200ナノ秒×50万回<br>＝(200×10<sup>-9</sup>)×(50×10<sup>4</sup>)<br>＝10000×10<sup>-5</sup><br>＝100×10<sup>-3</sup><br><br>という計算で 100ミリ秒だとわかります。<br><br>アクセス時間 100ミリ秒＋ページフォールトのオーバーヘッド100ミリ秒で、計200ミリ秒のサイクルをとることがわかります。<br><br>つまり、1秒(=1000ミリ秒)÷200ミリ秒＝5 で最大5回のページフォールトが発生することになります。<div class="img_margin"><img src="data/21_haru/img/19a.gif" width="442" height="110" alt="19a.gif/image-size:442×110"></div></div>
+<!-- SCRIPT END -->
+</body>
+</html>

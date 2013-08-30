@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成23年特別">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問19 タスクスケジューリング方式 平成23年特別｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成23年特別 午前問19</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成23年特別問題一覧</a> | <a href="q18.html" title="前の問題">前の問題</a> | <a href="q20.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問19</h3>
+<div>OSのスケジューリング方式に関する記述のうち，適切なものはどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">処理時間順方式では，既に消費したCPU時間の長いジョブに高い優先度を与える。</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">到着順方式では，ラウンドロビン方式に比べて特に処理時間の短いジョブの応答時間が短くなる。</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">優先度順方式では，一部のジョブの応答時間が極端に長くなることがある。</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li><div id="select_e">ラウンドロビン方式では，ジョブに割り当てるCPU時間(タイムクウォンタム)を短くするほど，到着順方式に近づく。</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>ｿﾌﾄｳｪｱ開発技術者 H15春 問25</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; ソフトウェア &gt;&gt; オペレーティングシステム</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><ul><li class="lia">処理時間順方式は、処理時間の短いジョブに対して高い優先度を与え、最初に実行する方式です。</li><li class="lii">ラウンドロビン方式では、実効可能待ち行列に並んだジョブに対して順番に一定時間のCPU使用権を与えていきます。このため処理時間の短いジョブは、先に実行可能待ち行列に並んでいたジョブよりも早く終了する可能性があります。一方、到着順方式では、実効可能待ち行列の最後でほかのジョブの終了を待ってから実行をします。<br>つまり到着順方式では、ラウンドロビン方式に比べて特に<em class="r">処理時間の短いジョブの応答時間が長く</em>なります。</li><li class="liu">正しい。優先度の低いジョブにはCPU使用権が与えられにくく、なかなか実行できないという状態が発生します。</li><li class="lie">ラウンドロビン方式は、実効可能状態になった順番(到着順)で、ジョブに一定時間のCPU使用権を割り当てていきます。つまりタイムクウォンタムを長くするほど到着順方式に近づいていき、タイムクウォンタムを無限に長くすれば到着順方式と全く同じになります。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

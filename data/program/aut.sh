@@ -1,0 +1,11 @@
+python form.py ~/public_html/question/base_data/data/21_haru/
+python form.py ~/public_html/question/base_data/data/21_aki/
+python form.py ~/public_html/question/base_data/data/22_haru/
+python form.py ~/public_html/question/base_data/data/22_aki/
+python form.py ~/public_html/question/base_data/data/23_haru/
+python form.py ~/public_html/question/base_data/data/23_aki/
+python form.py ~/public_html/question/base_data/data/23_toku/
+python form.py ~/public_html/question/base_data/data/24_haru/
+python form.py ~/public_html/question/base_data/data/24_aki/
+python form.py ~/public_html/question/base_data/data/24_haru/
+python form.py ~/public_html/question/base_data/data/25_haru/

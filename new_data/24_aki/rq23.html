@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成24年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問23 Webアクセシビリティ 平成24年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成24年秋期 午前問23</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成24年秋期問題一覧</a> | <a href="q22.html" title="前の問題">前の問題</a> | <a href="q24.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問23</h3>
+<div>視覚障害者に対してWebコンテンツの情報アクセシビリティを向上させるための配慮のうち，適切な例はどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">写真やイラストを多く取り入れたので，それらに対する代替テキストを付けなかった。</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">多数の項目を列挙する際に，リスト形式の代わりに，表形式を使用した。</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">文書のレイアウトが複雑であり，正しい読上げ順になるようにHTMLで記述するのが難しかったので，タグ付きPDFを使用した。</div><a href="#ans" class="selectBtn" id="t"><button>ウ</button></a></li>
+<li><div id="select_e">見出しの表現には，見出し要素(例 H1～H6)を用いず，フォントの相対サイズ(例 font-size：200%)を用いて大きい文字にした。</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; ヒューマンインターフェイス &gt;&gt; ヒューマンインタフェース技術</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ウ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>Webアクセシビリティ</strong>とは、「年齢や身体的制約・利用環境などにかかわらず、Webサイトにアクセスできサイト内を利用できるかどうか、またはその度合い」のことをいいます。<br>具体的には、<ul><li>文字色と背景色のコントラストを十分に確保する</li><li>音声読み上げブラウザに配慮した表記</li><li>画像には代替テキスト(alt属性)を加える</li><li>キーボード操作への配慮</li></ul>などの項目に考慮したWebサイト設計を行うことでアクセシビリティの向上につながります。<br><br>視覚に障害のある方がインターネットを利用する際にはスクリーンリーダや<strong>音声ブラウザ</strong>を導入し利用することになるので、このことに配慮したWebページとなっているかがポイントとなります。<ul><li class="lia">画像に対する代替テキストがあれば、音声ブラウザがその文字列を読み上げることで画像の内容を把握できるようになるので、アクセシビリティ向上のためには設定すべきです。HTMLで画像を表示するには"img"タグを使用しますが、その中に代替テキストを指定するalt属性を含めることが必須とされています。</li><li class="lii">一昔前には初心者でもレイアウトしやすく一般的であった表形式でのレイアウト("table"タグをレイアウトのために使う方法)は、音声ブラウザが本来のコンテンツの順番とは異なる順序で読み上げることになってしまうので、アクセシビリティ上は推奨されません。</li><li class="liu">正しい。通常WebページをPDFで構成することは「閲覧ソフトが必要」「ファイル容量が大きい」「セキュリティ上安全とは言えない」等のユーザビリティ上の問題があるので避けるべきです。しかしこの問題では「文書のレイアウトが複雑であり，正しい読上げ順になるようにHTMLで記述するのが難しい」という背景がありますので、Webページよりもタグ付きPDF<sup>※</sup>を使用することが視覚に障害のある方にとってのアクセシビリティ向上につながると言えます。</li><li class="lie">視覚に障害のある方(全盲である場合など)には文字の大きさがわかりませんので、単にフォントサイズを大きくするのではなく、見出し要素(例 H1～H6)や段落("p"タグ)を用いて音声ブラウザに文書構造を伝わるように適切なHTMLマークアップを行うことが求められます。適切にマークアップされたWebページにアクセスしたユーザは、音声ブラウザがもつ見出しだけやリストだけを読み上げる機能を使って　効率よく情報をたどることが可能になります。<br>このような理由から見出しを用いずにフォントサイズだけで見出しを表現することがアクセシビリティ向上になっているとは言えません。</li></ul><dl><dt>タグ付きPDF<sup>※</sup></dt><dd>一般的なPDFでは中に入っている読み上げ対象の文字列が、読み上げたい順序で入っていないことがあります。タグ付きPDFは、PDF内の文書をタグを用いて構造化し、正しい順序で読み上げられるようにしたものです。<br>タグ付きPDFの機能は、普通は、アクセシビリティの要求項目と考えられています。</dd></dl></div>
+<!-- SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問32 データベースの障害回復処理 平成21年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年秋期 午前問32</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年秋期問題一覧</a> | <a href="q31.html" title="前の問題">前の問題</a> | <a href="q33.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問32</h3>
+<div>データベースの障害回復処理に関する記述のうち，適切なものはどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">異なるトランザクション処理プログラムが，同一のデータベースを同時更新することによって生じる論理的な矛盾を防ぐために，データのブロック化が必要になる。</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">システムが媒体障害以外の原因によって停止した場合，チェックポイントの取得以前に終了したトランザクションについての回復作業は不要である。</div><a href="#ans" class="selectBtn" id="t"><button>イ</button></a></li>
+<li><div id="select_u">データベースの媒体障害に対して，バックアップファイルをリストアした後，ログファイルの更新前情報を使用してデータの回復処理を行う。</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e">トランザクション処理プログラムがデータベースの更新中に異常終了した場合には，ログファイルの更新後情報を使用してデータの回復処理を行う。</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; データベース &gt;&gt; トランザクション処理</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">イ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><ul><li class="lia">同時更新によるデータの不整合を防ぐためにはトランザクションの排他制御を行います。</li><li class="lii">正しい。DBMSは、ディスクに対する入出力効率を向上させるために、トランザクションの更新をメモリ上のバッファとログファイルに記憶しておき、一定の間隔ごとにまとめてディスクに反映させるという方式をとっています。このディスクと同期を取るタイミングとチェックポイントといいます。チェックポイントまでのトランザクションはディスクに反映済みなので、媒体障害以外の障害(システム障害やトランザクション障害)のときにはチェックポイント以前の回復作業は行う必要はありません。</li><li class="liu">媒体障害が発生したときには、バックアップファイルを用いてバックアップ時点の状態にした後に、トランザクションの更新後ログを使用したロールフォワードによってデータベースを復元します。</li><li class="lie">トランザクション障害が発生したときには、更新前ログを使用してデータベースをトランザクション以前の状態に戻すロールバックを行います。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

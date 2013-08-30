@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成24年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問4 文字エンコード 平成24年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成24年春期 午前問4</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成24年春期問題一覧</a> | <a href="q3.html" title="前の問題">前の問題</a> | <a href="q5.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問4</h3>
+<div>Unicode文字列をUTF-8でエンコードすると，各文字のエンコード結果の先頭バイトは2進表示が0又は11で始まり，それ以降のバイトは10で始まる。16進表示された次のデータは何文字のUnicode文字列をエンコードしたものか。<br><br>　CF 80 E3 81 AF E7 B4 84 33 2E 31 34 E3 81 A7 E3 81 99</div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">9</div><a href="#ans" class="selectBtn" id="t"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">10</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">11</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">12</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; 基礎理論 &gt;&gt; 情報に関する理論</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ア</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">16進データをバイト(8ビット)単位で2進数に変換して、文字列の先頭バイトを示す"0"または"11"ではじまるバイトがいくつあるかでデータに含まれる文字数を数えます。<br><br>各バイトデータの中で上位4ビット分だけわかれば判別が可能ですので、18バイトあるデータの上位4ビットをひとつずつ確認していくのが確実です。<ul><li>[C]→1100→先頭バイト</li><li>[8]→1000</li><li>[E]→1110→先頭バイト</li><li>[8]→1000</li><li>[A]→1010</li><li>[E]→1100→先頭バイト</li><li>[B]→1011</li><li>[8]→1000</li><li>[3]→0011→先頭バイト</li><li>[2]→0010→先頭バイト</li><li>[3]→0011→先頭バイト</li><li>[3]→0011→先頭バイト</li><li>[E]→1110→先頭バイト</li><li>[8]→1000</li><li>[A]→1010</li><li>[E]→1110→先頭バイト</li><li>[8]→1000</li><li>[9]→1001</li></ul>もうお分かりかもしれませんが、時間をかけて2進数に変換しなくても先頭ビットが"0"になるのは16進表記で0～7、先頭が"11"になるビットは16進表記でC～Fなので、16進表記の先頭がこれらに該当すれば先頭ビットと判断できます。<br><br>　<em class="r">C</em>F 80 <em class="r">E</em>3 81 AF <em class="r">E</em>7 B4 84 <em class="r">3</em>3 <em class="r">2</em>E <em class="r">3</em>1 <em class="r">3</em>4 <em class="r">E</em>3 81 A7 <em class="r">E</em>3 81 99<br><br>先頭バイトは9つですので文字数は9文字ということになります。<br></div>
+<!-- SCRIPT END -->
+</body>
+</html>

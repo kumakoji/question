@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成24年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問3 ハミング符号 平成24年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成24年秋期 午前問3</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成24年秋期問題一覧</a> | <a href="q2.html" title="前の問題">前の問題</a> | <a href="q4.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問3</h3>
+<div>4ビットから成る情報ビットx<sub>1</sub>x<sub>2</sub>x<sub>3</sub>x<sub>4</sub>に対して，<br>　(x<sub>1</sub>＋x<sub>2</sub>＋x<sub>3</sub>＋x<sub>5</sub>) mod 2＝0<br>　(x<sub>1</sub>＋x<sub>2</sub>＋x<sub>4</sub>＋x<sub>6</sub>) mod 2＝0<br>　(x<sub>2</sub>＋x<sub>3</sub>＋x<sub>4</sub>＋x<sub>7</sub>) mod 2＝0<br>を満たす冗長ビットx<sub>5</sub>x<sub>6</sub>x<sub>7</sub>を付加した符号x<sub>1</sub>x<sub>2</sub>x<sub>3</sub>x<sub>4</sub>x<sub>5</sub>x<sub>6</sub>x<sub>7</sub>を送信する。<br>　受信符号y<sub>1</sub>y<sub>2</sub>y<sub>3</sub>y<sub>4</sub>y<sub>5</sub>y<sub>6</sub>y<sub>7</sub>が，送信符号と高々1ビットしか異ならないとき，<br>　(y<sub>1</sub>＋y<sub>2</sub>＋y<sub>3</sub>＋y<sub>5</sub>) mod 2<br>　(y<sub>1</sub>＋y<sub>2</sub>＋y<sub>4</sub>＋y<sub>6</sub>) mod 2<br>　(y<sub>2</sub>＋y<sub>3</sub>＋y<sub>4</sub>＋y<sub>7</sub>) mod 2<br>がそれぞれ0になるかどうかによって，正しい情報ビットx<sub>1</sub>x<sub>2</sub>x<sub>3</sub>x<sub>4</sub>を求めることが<br>可能である。y<sub>1</sub>y<sub>2</sub>y<sub>3</sub>y<sub>4</sub>y<sub>5</sub>y<sub>6</sub>y<sub>7</sub>＝1100010であるとき，正しい情報ビットはどれか。ここで，a mod bは，aをbで割った余りを表す。</div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">0100</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">1000</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">1100</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">1101</div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>ｿﾌﾄｳｪｱ開発技術者 H14春 問8</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; 基礎理論 &gt;&gt; 通信に関する理論</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">　(y<sub>1</sub>＋y<sub>2</sub>＋y<sub>3</sub>＋y<sub>5</sub>) mod 2<br>　(y<sub>1</sub>＋y<sub>2</sub>＋y<sub>4</sub>＋y<sub>6</sub>) mod 2<br>　(y<sub>2</sub>＋y<sub>3</sub>＋y<sub>4</sub>＋y<sub>7</sub>) mod 2<br><br>に、y<sub>1</sub>y<sub>2</sub>y<sub>3</sub>y<sub>4</sub>y<sub>5</sub>y<sub>6</sub>y<sub>7</sub>＝1100010 を代入して検査を行います。<br><br>　(1＋1＋0＋0) mod 2＝2 mod 2＝0<br>　(1＋1＋0＋1) mod 2＝3 mod 2＝1<br>　(1＋0＋0＋0) mod 2＝1 mod 2＝1<br><br>N mod 2の結果が0であれば正しい情報ビット、1であれば誤りが生じていることになります。誤りが生じているのは2、3番目の2つなので、この2つの式に共通している「y<sub>4</sub>」に誤りが生じていることがわかります。<br>したがって<br><br>　y<sub>1</sub>y<sub>2</sub>y<sub>3</sub>y<sub>4</sub>＝110<em class="r">0</em>→110<em class="r">1</em><br><br>4ビットから成る情報ビットx<sub>1</sub>x<sub>2</sub>x<sub>3</sub>x<sub>4</sub>は「1101」であったということになります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

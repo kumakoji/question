@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成22年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問33 SQL文 平成22年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成22年春期 午前問33</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成22年春期問題一覧</a> | <a href="q32.html" title="前の問題">前の問題</a> | <a href="q34.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問33</h3>
+<div>表Aから実行結果Bを得るためのSQL文はどれか。<div class="img_margin"><img src="data/22_haru/img/33.gif" width="488" height="160" alt="33.gif/image-size:488×160"></div></div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a"><div class="code">SELECT 部署コード,社員コード名前 FROM A<br>	　GROUP BY 社員コード</div></div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i"><div class="code">SELECT 部署コード, 社員コード, 名前 FROM A<br>	　GROUP BY 部署コード</div></div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u"><div class="code">SELECT 部署コード, 社員コード, 名前 FROM A<br>	　ORDER BY 社員コード, 部署コード</div></div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e"><div class="code">SELECT 部署コード, 社員コード, 名前 FROM A<br>	　ORDER BY 部署コード, 社員コード</div></div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; データベース &gt;&gt; データ操作</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>ORDER BY句</strong>はSELECT文で抽出されたレコードを整列させて表示させるために使われます。<br>ORDER BYに続けて整列の基準となる値を保持する列名を指定します。列名は複数指定でき、最初指定した列の値が同じだったときは２、３番目に指定した列の値に従って整列が行われます。<br><br>標準では昇順（小さい順）での整列ですが、列名に続けて<em class="r">DSEC</em>を指定することで降順(大きい順)の整列もできます。<ul><li class="lia">GROUP BY 句を使う場合、SELECTで選択できる列はGROUP BY 句で指定した列か集約関数に限られています。したがって無効なSQL文です。</li><li class="lii">「ア」と同じ理由で無効なSQL文です。</li><li class="liu">ORDER BY句を使うのはいいのですが、整列に使う列名の指定順番が間違っています。この指定方法だと社員コードが2番目に小さい「斎藤栄一」さんが上から2番目に表示されます。</li><li class="lie">正しい。抽出されたレコードを部署コードを第1キー列、社員コードを第2キー列として昇順に整列するSQL文です。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

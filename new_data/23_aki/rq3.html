@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成23年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問3 ハミング符号 平成23年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成23年秋期 午前問3</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成23年秋期問題一覧</a> | <a href="q2.html" title="前の問題">前の問題</a> | <a href="q4.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問3</h3>
+<div>符号長7ビット，情報ビット数4ビットのハミング符号による誤り訂正の方法を，次のとおりとする。<br>　受信した7ビットの符号語x<sub>1</sub>x<sub>2</sub>x<sub>3</sub>x<sub>4</sub>x<sub>5</sub>x<sub>6</sub>x<sub>7</sub>(x<sub>k</sub>=0又は1)に対して<div><img src="data/23_aki/img/03.gif" width="168" height="83" alt="03.gif/image-size:168×83"></div>を計算し，c<sub>0</sub>，c<sub>1</sub>，c<sub>2</sub>の中に少なくとも一つは0でないものがある場合には，<br>　i = c<sub>0</sub>＋c<sub>1</sub>×2＋c<sub>2</sub>×4<br>を求めて，左からi ビット目を反転することによって誤りを訂正する。<br>　受信した符号語が1000101であった場合，誤り訂正後の符号語はどれか。</div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">1000001</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">1000101</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">1001101</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">1010101</div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"><ul id="recentList"><li>[この問題の出題歴]</li><li>ｿﾌﾄｳｪｱ開発技術者 H15春 問66</li></ul></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; 基礎理論 &gt;&gt; 通信に関する理論</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>ハミング符号</strong>は、情報ビットに対して検査ビットを付加することで、２ビットの誤り検出と１ビットの自動訂正機能をもった方式です。<br><br>手順に従って符号語10000101に対し誤りの検査を行います。<br><br> C<sub>0</sub>＝(1＋0＋1＋1) mod 2＝3 mod 2＝1<br> ＝(0＋0＋0＋1) mod 2＝1 mod 2＝1<br> C<sub>2</sub>＝(0＋1＋0＋1) mod 2＝2 mod 2＝0<br><br>C<sub>0</sub>およびC<sub>1</sub>が0でないので、<br><br>　i＝C<sub>0</sub>＋C<sub>1</sub>×2＋C<sub>2</sub>×4<br>　＝1＋2＋0＝<em class="r">3</em><br><br>結果として3が求められたので、元の符号語10000101の3ビット目(x<sub>3</sub>)を反転させた「10101010」が誤り訂正後の符号語になります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成22年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問1 ビット演算の応用 平成22年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成22年春期 午前問1</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成22年春期問題一覧</a> | <a href="q2.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問1</h3>
+<div>0以上255以下の整数nに対して，<div class="img_margin"><img src="data/22_haru/img/01.gif" width="198" height="42" alt="01.gif/image-size:198×42"></div>と定義する。next(n)と恒等的に等しい式はどれか。ここで，x AND y 及び x OR y は，それぞれxとyを2進数表現にして，けたごとの論理積及び論理和をとったものとする。</div>
+<div class="ansbg" style="margin: 3em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:220px"><div id="select_a">(n＋1) AND 255</div><a href="#ans" class="selectBtn" id="t"><button>ア</button></a></li>
+<li class="fl" style="min-width:220px"><div id="select_i">(n＋1) AND 256</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:220px;clear:left"><div id="select_u">(n＋1) OR 255</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:220px"><div id="select_e">(n＋1) OR 256</div><a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* 336x280 AP */
+google_ad_slot = "5274883984";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; 基礎理論 &gt;&gt; 離散数学</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">ア</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">next(n)のとる値を考えてみると、0→1→2→3→・・・→255→0→1 というように、引数の値に1を加算した値を返し255になると0に戻る関数であると言えます。<br><br>この問題で考えなければいけないポイントは、<ul><li class="li1">1ずつの加算がおこなわれるか。</li><li class="li2">next(255)のときに結果が 0となるか。</li></ul>の2点です。<br><br>まず論理和(OR)演算である「ウ」と「エ」は、常に結果が同じ値(「ウ」は 255、「エ」は 256)となってしまうので正しくないことがわかります。<br>残った論理積(AND)演算である「ア」と「イ」ですが、「イ」を2進数で表すと 1 0000 0000となり、下位8ビットの演算結果は常に0になることがわかります。<br><br>つまり「イ」は間違いで、正しく結果が返されるのは「ア」だけということになります。下は「ア」の式のビット演算図です。<div class="img_margin"><img src="data/22_haru/img/01a.gif" width="468" height="114" alt="01a.gif/image-size:468×114"></div></div>
+<!-- SCRIPT END -->
+</body>
+</html>

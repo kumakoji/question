@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成23年特別">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問35 転送時間の計算 平成23年特別｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成23年特別 午前問35</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成23年特別問題一覧</a> | <a href="q34.html" title="前の問題">前の問題</a> | <a href="q36.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問35</h3>
+<div>図のように，2台の端末がルータと中継回線で接続されているとき，端末Aがフレームを送信し始めてから，端末Bがフレームを受信し終わるまでの時間は，およそ何ミリ秒か。<br><br>〔条件〕<br>フレーム長：LAN，中継回線ともに1,500バイト<br>LANの伝送速度：10Mビット／秒<br>中継回線の伝送速度：1.5Mビット／秒<br>1フレームのルータ処理時間：両ルータともに0.8ミリ秒<div class="img_margin"><img src="data/23_toku/img/35.gif" width="373" height="85" alt="35.gif/image-size:373×85"></div></div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">3</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">6</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">10</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e">12</div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; ネットワーク &gt;&gt; ネットワーク方式</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">まず伝送速度の単位がビットなので、フレーム長1,500バイトの単位を変換します。<br>　フレーム長＝1,500バイト＝12,000ビット<br><br>端末AからA側ルータまでにデータを転送するのに要する時間は、<br>　12,000÷10Mビット＝0.0012秒＝1.2ミリ秒<br><br>A側ルータではフレームの処理時間0.8ミリ秒が必要となります。<br><br>A側のルータからB側のルータへは中継回線(1.5Mビット／秒)を介して転送されます。転送に要する時間は、<br>　12,000ビット÷1.5Mビット＝0.008秒＝8ミリ秒<br><br>B側ルータではフレームの処理時間0.8ミリ秒が必要となります。<br><br>B側ルータから端末Bへの転送には、端末Aからルータまでと同じ1.2ミリ秒を要します。<br><br>端末Aから端末Bにデータを送信するのに要する時間は、上記の時間を合計して、<br><br>　1.2＋0.8＋8＋0.8＋1.2＝<em class="r">12</em><br><br>12ミリ秒であることがわかります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>

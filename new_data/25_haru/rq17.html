@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成25年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問17 ジョブのターンアラウンドタイム 平成25年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成25年春期 午前問17</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成25年春期問題一覧</a> | <a href="q16.html" title="前の問題">前の問題</a> | <a href="q18.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問17</h3>
+<div>五つのジョブA～Eに対して，ジョブの多重度が1で，処理時間順方式のスケジューリングを適用した場合，ジョブBのターンアラウンドタイムは何秒か。ここで，OSのオーバヘッドは考慮しないものとする。<div class="img_margin"><img src="data/25_haru/img/17.gif" width="244" height="147" alt="17.gif/image-size:244×147"></div></div>
+<div class="ansbg" style="margin: 4em 0 6em 0"><ul class="selectList cf">
+<li class="fl" style="min-width:90px"><div id="select_a">8</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_i">9</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_u">10</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="min-width:90px"><div id="select_e">11</div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; ソフトウェア &gt;&gt; オペレーティングシステム</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>ターンアラウンドタイム</strong>は、入力作業の開始からすべての出力作業を終えるまでにかかる時間のことをいいます。<strong>処理時間順方式</strong>では、処理時間の短いタスクに対してより高い優先順位を与えて最初に実行するのタスクスケジューリングを行うため、到着時刻と処理時間の両方に注目してジョブの処理順を考えると、<ol><li>初期状態で到着しているジョブはAだけなのでAを処理する。</li><li>ジョブAの処理終了時(開始から2秒後)に到着しているジョブ(BとC)のうち処理時間の短いCの処理に移る。</li><li>ジョブCの処理終了後(開始から5秒後)に到着しているジョブ(BとDとE)のうち処理時間の短いEの処理に移る。</li><li>ジョブEの処理終了後(開始から6秒後)に到着しているジョブ(BとD)のうち処理時間の短いDの処理に移る。</li><li>ジョブDの処理終了後(開始から8秒後)に最後のジョブBの処理に移る。</li><li>ジョブBの処理終了(開始から12秒後)し、5つのジョブの処理が完了する</li></ol>というように「A→C→E→D→B」になり、したがってジョブBが到着してから処理が終了するまでは11秒を要することになります。<div class="img_margin"><img src="data/25_haru/img/17a.gif" width="487" height="107" alt="17a.gif/image-size:487×107"></div></div>
+<!-- SCRIPT END -->
+</body>
+</html>

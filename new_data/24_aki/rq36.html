@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成24年秋期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問36 シングルサインオンの説明 平成24年秋期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成24年秋期 午前問36</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成24年秋期問題一覧</a> | <a href="q35.html" title="前の問題">前の問題</a> | <a href="q37.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問36</h3>
+<div>シングルサインオンの説明のうち，適切なものはどれか。</div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li><div id="select_a">クッキーを使ったシングルサインオンの場合，サーバごとの認証情報を含んだクッキーをクライアントで生成し，各サーバ上で保存，管理する。</div><a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li><div id="select_i">クッキーを使ったシングルサインオンの場合，認証対象のサーバを，異なるインターネットドメインに配置する必要がある。</div><a href="#ans" class="selectBtn" id="f"><button>イ</button></a></li>
+<li><div id="select_u">リバースプロキシを使ったシングルサインオンの場合，認証対象のWebサーバを，異なるインターネットドメインに配置する必要がある。</div><a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li><div id="select_e">リバースプロキシを使ったシングルサインオンの場合，利用者認証においてパスワードの代わりにディジタル証明書を用いることができる。</div><a href="#ans" class="selectBtn" id="t"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; セキュリティ &gt;&gt; 情報セキュリティ</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">エ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg"><strong>シングルサインオン</strong>(Single Sign-On, SSO)は、ユーザ認証を一度受けるだけで許可された複数のサーバへのアクセスについても認証する技術です。実装方式としては、Cookieを使うもの、リバースプロキシ型などがあります。<dl><dt>クッキーを使うSSO</dt><dd><ol><li>最初のログインの際には、Webサーバにインストールされたエージェントが認証サーバにアクセスで認証を行う。</li><li>その認証・識別情報をクッキーに含めクライアントに返す。</li><li>別のWebサーバにアクセスがあった場合には、エージェントが認証サーバにアクセスしクッキー情報をもとに認証を行う。</li></ol></dd><dt>リバースプロキシ型SSO</dt><dd><ol><li>すべてのWebサーバへのアクセスをリバースプロキシに集約する。</li><li>リバースプロキシはアクセスしてきたユーザを認証する。</li><li>ログインに成功すると、リバースプロキシはWebサーバに代理アクセスし結果をユーザに返す。</li></ol></dd><dt>SAML(Security Assertion Markup Language)を使うSSO</dt><dd>認証情報に加え，属性情報とアクセス制御情報を異なるドメインに伝達するためのWebサービスプロトコル。これを用いてほかのドメインとの間で認証情報を交換することで、同一ドメインに留まらない大規模なサイトにおいてもシングルサインオンの仕組みやセキュアな認証情報管理を実現できる。</dd></dl><ul><li class="lia">クッキーはサーバで生成され、クライアントのコンピュータに保存されます。</li><li class="lii">クッキーの有効範囲は同一ドメイン内のページに限られています。異なるドメインに配置されたシステムは他のドメインで生成されたクッキーにアクセスすることができないので認証を行うことはできません。</li><li class="liu">Webサーバには認証を行わないとアクセスできないようにしたいので、リバースプロキシと同一ドメインに配置しなくてはなりません。</li><li class="lie">正しい。IDとパスワードの組合せのほかにディジタル証明書が使用可能です。</li></ul></div>
+<!-- SCRIPT END -->
+</body>
+</html>

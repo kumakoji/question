@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="応用情報技術者,過去問題, 平成21年春期">
+<link rel="stylesheet" href="../../ap.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jsInclude.js"></script>
+<link rel="SHORTCUT ICON" href="../../img/apicon.ico">
+<title>問34 参照制約 平成21年春期｜応用情報技術者試験.com</title>
+</head>
+<body>
+<!-- MAINCONTENT START --><div class="main kako"><h2>応用情報技術者 平成21年春期 午前問34</h2><div class="anslink"><a href="./" title="問題一覧">応用情報技術者 平成21年春期問題一覧</a> | <a href="q33.html" title="前の問題">前の問題</a> | <a href="q35.html" title="次の問題">次の問題</a></div><h3 class="qno">午前問34</h3>
+<div>関係データベースの"注文"表又は"商品"表の行を削除する場合，"注文明細"表に対する操作として，適切な組合せはどれか。ここで，表定義中の実線の下線は主キーを，破線は外部キーを表す。<div class="img_margin"><img src="data/21_haru/img/34.gif" width="334" height="85" alt="34.gif/image-size:334×85"></div>〔削除時の操作〕<br>　A： 主キー側の行を削除する際，それを参照している外部キー側の行を同時に削除する。 <br>　B： 主キー側の行を削除する際，それを参照している外部キー側の行があれば，主キー側の行の削除を許さない。 </div>
+<div class="ansbg" style="margin: 2em 0 3em 0"><ul class="selectList cf">
+<li style="margin-left:5px"><img src="data/21_haru/img/34a.gif" width="375" height="106" alt="34a.gif/image-size:375×106"></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="f"><button>ア</button></a></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="t"><button>イ</button></a></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="f"><button>ウ</button></a></li>
+<li class="fl" style="width:10px">　<a href="#ans" class="selectBtn" id="f"><button>エ</button></a></li>
+</ul></div>
+<div class="ad fl" id="ans"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5061380080248584";
+/* APcom 300x250 Image */
+google_ad_slot = "5559969278";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+<div class="fl"></div>
+<div class="clear"></div>
+<h3>分類</h3><p>テクノロジ系 &gt;&gt; データベース &gt;&gt; データベース設計</p><h3>正解</h3><div class="answerBox"><button id="showAnswerBtn">正解を表示する</button><span id="answerChar">イ</span><div id="popup"></div></div><h3>解説</h3>
+<div class="ansbg">まず"注文"表の行の削除ですが、一般に1回の注文について複数の商品を受注することが考えられるので"注文"表の1つの行について"注文明細"表の行が複数存在することになります(注文－注文明細＝1対多)。"注文"表の行を削除する(1つの注文を取り消す)場合にはそれに対応する"注文明細"表の行のすべてを削除する必要があるので、このときの操作は[A]が適切となります。<br><br>次に"商品"表の行の削除ですが、1つの商品は複数の注文に使われるので"商品"表のある1つの行を参照する"注文明細"表の行が複数存在する可能性があります。"商品"の行を削除する場合、"注文明細"表に"商品"表内の存在しない行を参照する行が生じることがあり、参照整合性が崩れる可能性があります。(このときに[A]の処理を適用して対応する"注文明細"表の行をすべて削除してしまうと、商品のデータ削除したいだけなのに注文明細のデータまで削除してしまうことになります。)このような場合には「"注文明細"表に"商品"表の削除対象の行を参照する行がある場合にはその行を削除できない」という参照制約を設定することでデータの矛盾を防ぎます。<br><br>したがって注文"表の行の削除→[A]の操作、"商品"表の行の削除→[B]の操作 が適切となります。</div>
+<!-- SCRIPT END -->
+</body>
+</html>
